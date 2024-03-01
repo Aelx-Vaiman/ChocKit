@@ -33,11 +33,11 @@ A library of reusable SwiftUI components that are missing from the SwiftUI frame
 ChocKit is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ChocKit', '~> 0.1.3'
+pod 'ChocKit', '~> 0.1.4'
 
 ChocKit is also available as a Swift Package. You can add it to your Xcode project by navigating to File > Swift Packages > 
 Add Package Dependency and entering the repository URL: https://github.com/Aelx-Vaiman/ChocKit
-Use version 0.1.3 when prompted for the package version.
+Use version 0.1.4 when prompted for the package version.
 
 
 ## Author

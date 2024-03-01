@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChocKit'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A library of reusable SwiftUI components that are missing from the SwiftUI framework.'
 
   s.description      = <<-DESC
