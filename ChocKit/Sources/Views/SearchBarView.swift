@@ -10,9 +10,9 @@
                                                                                 
 import SwiftUI
 
-struct SearchBarView: View {
+public struct SearchBarView: View {
     
-    enum SearchBarViewStyle: Equatable {
+    public enum SearchBarViewStyle: Equatable {
         case standard
         case shadow(shadowOpacity: Double = 0.5)
     }
@@ -26,7 +26,7 @@ struct SearchBarView: View {
     private let accentColor: Color
     private let style: SearchBarViewStyle
 
-    init(searchText: Binding<String>, placeholder: String = "Search", textColor: Color = .black, placeholderTextColor: Color = .gray, backgroundColor: Color = .white, accentColor: Color = .black, style: SearchBarViewStyle = .standard, height: CGFloat = 8) {
+    public init(searchText: Binding<String>, placeholder: String = "Search", textColor: Color = .black, placeholderTextColor: Color = .gray, backgroundColor: Color = .white, accentColor: Color = .black, style: SearchBarViewStyle = .standard, height: CGFloat = 8) {
         self._searchText = searchText
         self.placeholder = placeholder
         self.textColor = textColor
@@ -37,7 +37,7 @@ struct SearchBarView: View {
         self.height = height
     }
 
-    var body: some View {
+    public var body: some View {
         switch style {
         case .standard:
             standard
@@ -45,10 +45,8 @@ struct SearchBarView: View {
             shadow(shadowOpacity: shadowOpacity)
         }
     }
-}
-
-fileprivate extension SearchBarView {
-    var standard: some View {
+    
+    private var standard: some View {
         searchBarNoFrame
             .background(
                 RoundedRectangle(cornerRadius: 15)
@@ -59,7 +57,7 @@ fileprivate extension SearchBarView {
         
     }
     
-    func shadow(shadowOpacity: Double) -> some View {
+    private func shadow(shadowOpacity: Double) -> some View {
         searchBarNoFrame
             .background(
                 RoundedRectangle(cornerRadius: 25)
@@ -70,10 +68,8 @@ fileprivate extension SearchBarView {
                     )
             )
     }
-}
-
-fileprivate extension SearchBarView {
-    var  searchBarNoFrame: some View {
+    
+    private var searchBarNoFrame: some View {
         HStack {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(
@@ -105,14 +101,10 @@ fileprivate extension SearchBarView {
     }
 }
 
-struct SearchBarView_Previews: PreviewProvider, View {
-    @State private var searchText = ""
+public struct SearchBarView_Previews: PreviewProvider {
+    @State private static var searchText = ""
 
-    static var previews: some View {
-        Self()
-    }
-
-    var body: some View {
+    public static var previews: some View {
         Group {
             SearchBarView(searchText: $searchText, backgroundColor: .white, style: .shadow())
                 .padding()

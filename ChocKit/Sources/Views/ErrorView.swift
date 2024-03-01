@@ -83,7 +83,7 @@ extension ErrorView where ContentLabel == Label<Text, Image>, Description == Tex
     }
 }
 
-fileprivate struct ErrorLabelStyle: LabelStyle {
+private struct ErrorLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         VStack(spacing: 10) {
             configuration.icon
@@ -96,8 +96,8 @@ fileprivate struct ErrorLabelStyle: LabelStyle {
     }
 }
 
-struct ErrorView_Previews: PreviewProvider {
-    static var previews: some View {
+public struct ErrorView_Previews: PreviewProvider {
+    public static var previews: some View {
             ErrorView {
                 Label("No internet connection. Please check your network settings and try again.", systemImage: "wifi.exclamationmark")
             } description: {
