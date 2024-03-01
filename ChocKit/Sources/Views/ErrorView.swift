@@ -11,7 +11,7 @@
 
 import SwiftUI
 
-struct ErrorView<ContentLabel, Description, Actions> : View where ContentLabel : View, Description : View, Actions : View {
+public struct ErrorView<ContentLabel, Description, Actions> : View where ContentLabel : View, Description : View, Actions : View {
     
     private let label: ContentLabel
     private let description: Description
@@ -23,7 +23,7 @@ struct ErrorView<ContentLabel, Description, Actions> : View where ContentLabel :
         self.action = action()
     }
     
-    var body: some View {
+    public var body: some View {
         VStack(spacing: 4) {
             label
                 .labelStyle(ErrorLabelStyle())
@@ -48,7 +48,7 @@ struct ErrorView<ContentLabel, Description, Actions> : View where ContentLabel :
     }
 }
 
-extension ErrorView where ContentLabel == Label<Text, Image>, Description == Text?, Actions == EmptyView {
+public extension ErrorView where ContentLabel == Label<Text, Image>, Description == Text?, Actions == EmptyView {
     
     init(_ title: LocalizedStringKey, systemImage name: String, description: Text? = nil) {
         self.init {
