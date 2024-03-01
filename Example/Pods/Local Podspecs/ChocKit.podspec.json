@@ -1,0 +1,22 @@
+{
+  "name": "ChocKit",
+  "version": "0.1.0",
+  "summary": "A short description of ChocKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Alex Vaiman/ChocKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Alex Vaiman": "vaiman.software@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Alex Vaiman/ChocKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ChocKit/Classes/**/*"
+}

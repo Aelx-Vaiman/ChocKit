@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '16.0'
+
+target 'ChocKit_Example' do
+  pod 'ChocKit', :path => '../'
+
+  target 'ChocKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

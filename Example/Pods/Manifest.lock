@@ -1,0 +1,16 @@
+PODS:
+  - ChocKit (0.1.0)
+
+DEPENDENCIES:
+  - ChocKit (from `../`)
+
+EXTERNAL SOURCES:
+  ChocKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ChocKit: e27d33a5336e66556fc76a0cc00ce117a90c66b1
+
+PODFILE CHECKSUM: f110db9f30656862e2efe38bafcb031f56cbc976
+
+COCOAPODS: 1.14.2
