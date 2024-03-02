@@ -12,8 +12,10 @@ public struct ChockShadow {
     let color: Color
     let x: CGFloat
     let y: CGFloat
+    public static let defaultShadowColor = Color(.sRGBLinear, white: 0, opacity: 0.33)
+   
     
-    public init(radius: CGFloat, color: Color = .black, x: CGFloat = 0, y: CGFloat = 0) {
+    public init(radius: CGFloat, color: Color = Self.defaultShadowColor, x: CGFloat = 0, y: CGFloat = 0) {
         self.radius = radius
         self.color = color
         self.x = x

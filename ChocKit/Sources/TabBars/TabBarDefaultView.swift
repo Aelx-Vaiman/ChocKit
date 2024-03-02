@@ -38,7 +38,7 @@ import SwiftUI
 ///     insetPadding: 12,
 ///     outerPadding: 12,
 ///     cornerRadius: 30,
-///     shadow: ChockShadow(radius: 8, color: .gray, x: 0 , y:  -5)
+///     shadow: ChockShadow(radius: 8, y:  -5)
 ///  ```
 public struct TabBarDefaultView: View {
     
@@ -67,7 +67,7 @@ public struct TabBarDefaultView: View {
         insetPadding: CGFloat = 10,
         outerPadding: CGFloat = 0,
         cornerRadius: CGFloat = 0,
-        shadow: ChockShadow = ChockShadow(radius: 0, color: .gray)
+        shadow: ChockShadow = ChockShadow(radius: 0)
     ) {
         self._selection = selection
         self.tabs = tabs
