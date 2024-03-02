@@ -5,7 +5,6 @@
 //  Created by Alex Vaiman on 13/02/2024.
 //
 
-import Foundation
 import SwiftUI
 
 internal extension UIApplication {

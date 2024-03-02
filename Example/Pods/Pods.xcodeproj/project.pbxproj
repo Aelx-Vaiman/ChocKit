@@ -11,6 +11,7 @@
 		211A5AF22B92323000A9BF22 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AEE2B92323000A9BF22 /* ErrorView.swift */; };
 		211A5AF32B92323000A9BF22 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AEF2B92323000A9BF22 /* SearchBarView.swift */; };
 		211A5AFD2B923A3B00A9BF22 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */; };
+		216E29052B9342A700118E28 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29042B9342A700118E28 /* Global.swift */; };
 		21F7C0A12B92020900DAAE2A /* HapticOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06A2B92020900DAAE2A /* HapticOption.swift */; };
 		21F7C0A22B92020900DAAE2A /* HapticViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */; };
 		21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06C2B92020900DAAE2A /* Haptics.swift */; };
@@ -88,6 +89,7 @@
 		211A5AEE2B92323000A9BF22 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		211A5AEF2B92323000A9BF22 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		216E29042B9342A700118E28 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		21AB03E018B4ECF5AB9473F560001F8C /* ChocKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChocKit.release.xcconfig; sourceTree = "<group>"; };
 		21F7C06A2B92020900DAAE2A /* HapticOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticOption.swift; sourceTree = "<group>"; };
 		21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticViewModifier.swift; sourceTree = "<group>"; };
@@ -206,9 +208,18 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
+		216E29032B93428D00118E28 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				216E29042B9342A700118E28 /* Global.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		21F7C0682B92020900DAAE2A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				216E29032B93428D00118E28 /* Global */,
 				216E28FE2B9282E200118E28 /* Internal */,
 				21F7C0692B92020900DAAE2A /* Haptics */,
 				21F7C06D2B92020900DAAE2A /* Stacks */,
@@ -674,6 +685,7 @@
 				21F7C0C22B92020900DAAE2A /* RootView.swift in Sources */,
 				21F7C0AE2B92020900DAAE2A /* NonLazyHGrid.swift in Sources */,
 				21F7C0AF2B92020900DAAE2A /* NonLazyVGrid.swift in Sources */,
+				216E29052B9342A700118E28 /* Global.swift in Sources */,
 				21F7C0AD2B92020900DAAE2A /* AsyncViewBuilder.swift in Sources */,
 				211A5AF32B92323000A9BF22 /* SearchBarView.swift in Sources */,
 				21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */,

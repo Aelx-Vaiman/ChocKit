@@ -38,7 +38,7 @@ import SwiftUI
 ///     insetPadding: 12,
 ///     outerPadding: 12,
 ///     cornerRadius: 30,
-///     shadowRadius: 8)
+///     shadow: ChockShadow(radius: 8, color: .gray, x: 0 , y:  -5)
 ///  ```
 public struct TabBarDefaultView: View {
     
@@ -53,7 +53,7 @@ public struct TabBarDefaultView: View {
     let insetPadding: CGFloat
     let outerPadding: CGFloat
     let cornerRadius: CGFloat
-    let shadowRadius: CGFloat
+    let shadow: ChockShadow
     
     public init(
         tabs: [TabBarItem],
@@ -67,7 +67,7 @@ public struct TabBarDefaultView: View {
         insetPadding: CGFloat = 10,
         outerPadding: CGFloat = 0,
         cornerRadius: CGFloat = 0,
-        shadowRadius: CGFloat = 0
+        shadow: ChockShadow = ChockShadow(radius: 0, color: .gray)
     ) {
         self._selection = selection
         self.tabs = tabs
@@ -80,7 +80,7 @@ public struct TabBarDefaultView: View {
         self.insetPadding = insetPadding
         self.outerPadding = outerPadding
         self.cornerRadius = cornerRadius
-        self.shadowRadius = shadowRadius
+        self.shadow = shadow
     }
     
     public var body: some View {
@@ -100,7 +100,7 @@ public struct TabBarDefaultView: View {
                     RoundedRectangle(cornerRadius: cornerRadius)
                         .fill(backgroundColor)
                         .shadow(
-                            radius: shadowRadius, x: 0, y: -5
+                            color: shadow.color, radius: shadow.radius, x: shadow.x, y: shadow.y
                         )
                         .edgesIgnoringSafeArea(.all)
                 } else {
