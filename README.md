@@ -25,8 +25,17 @@ A library of reusable SwiftUI components that are missing from the SwiftUI frame
 - [ViewModifiers](https://github.com/SwiftfulThinking/SwiftfulUI/wiki/ViewModifiers)
 - [Views](https://github.com/SwiftfulThinking/SwiftfulUI/wiki/Views)
 
+## Author
+
+Alex Vaiman, alex.vaiman@gmail.com
+
+## License
+
+ChocKit is available under the MIT license. See the LICENSE file for more info.
 
 ## Requirements
+
+- Ios16
 
 ## Installation
 
@@ -35,15 +44,11 @@ ChocKit is available through [CocoaPods](https://cocoapods.org). To install it, 
 ```ruby
 pod 'ChocKit', '~> 0.1.4'
 
-ChocKit is also available as a Swift Package. You can add it to your Xcode project by navigating to File > Swift Packages > 
-Add Package Dependency and entering the repository URL: https://github.com/Aelx-Vaiman/ChocKit
-Use version 0.1.4 when prompted for the package version.
+ChocKit is also available as a Swift Package. You can add it to your Xcode project by following these steps:
+
+1. Navigate to `File` > `Swift Packages` > `Add Package Dependency` in Xcode.
+2. Enter the repository URL: https://github.com/Aelx-Vaiman/ChocKit.git .
+3. When prompted for the package version, use 0.1.4.
 
 
-## Author
 
-Alex Vaiman, alex.vaiman@gmail.com
-
-## License
-
-ChocKit is available under the MIT license. See the LICENSE file for more info.
