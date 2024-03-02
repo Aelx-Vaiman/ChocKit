@@ -41,10 +41,7 @@ public struct AsyncButton<Label: View>: View {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
     } label: { isPerformingAction in
         ZStack {
-            if isPerformingAction {
-                ProgressView()
-            }
-            
+            ProgressView().opacity(isPerformingAction ? 1 : 0)
             Text("Hello, world!")
                 .opacity(isPerformingAction ? 0 : 1)
         }
