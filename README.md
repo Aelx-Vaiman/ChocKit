@@ -44,7 +44,7 @@ ChocKit is available through [CocoaPods](https://cocoapods.org). To install it, 
 
 ```ruby
 pod 'ChocKit', '~> 0.1.5'
-
+```
 ChocKit is also available as a Swift Package. You can add it to your Xcode project by following these steps:
 
 1. Navigate to `File` > `Swift Packages` > `Add Package Dependency` in Xcode.
