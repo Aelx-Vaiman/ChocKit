@@ -80,7 +80,19 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                     .tabBarItem(tab: tabs[1], selection: selection)
                     .edgesIgnoringSafeArea(.all)
             } tabBar: {
-                TabBarDefaultView(tabs: tabs, selection: $selection)
+                TabBarDefaultView(
+                   tabs: tabs,
+                   selection: $selection,
+                   accentColor: .blue,
+                   defaultColor: .gray,
+                   backgroundColor: .white,
+                   font: .caption,
+                   iconSize: 20,
+                   spacing: 6,
+                   insetPadding: 12,
+                   outerPadding: 12,
+                   cornerRadius: 30,
+                   shadowRadius: 8)
             }
         }
     }
