@@ -23,7 +23,7 @@ import SwiftUI
 ///     spacing: 6,
 ///     insetPadding: 10,
 ///     outerPadding: 0,
-///     cornerRadius: 0)
+///     shadow: ChockShadow() 
 ///
 ///  // 'Floating' style
 ///  TabBarDefaultView(
