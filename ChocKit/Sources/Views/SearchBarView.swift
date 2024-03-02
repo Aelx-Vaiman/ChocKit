@@ -12,9 +12,9 @@ import SwiftUI
 
 public struct SearchBarView: View {
     
-    public enum SearchBarViewStyle: Equatable {
+    public enum SearchBarViewStyle {
         case standard
-        case shadow(shadowOpacity: Double = 0.5)
+        case shadow(shadow: ChockShadow = ChockShadow(radius: 8, opacity: 0.7))
     }
     
     @Binding var searchText: String
@@ -41,8 +41,8 @@ public struct SearchBarView: View {
         switch style {
         case .standard:
             standard
-        case .shadow(let shadowOpacity):
-            shadow(shadowOpacity: shadowOpacity)
+        case .shadow(let shadow):
+            self.shadow(shadow: shadow)
         }
     }
     
@@ -57,14 +57,14 @@ public struct SearchBarView: View {
         
     }
     
-    private func shadow(shadowOpacity: Double) -> some View {
+    private func shadow(shadow: ChockShadow) -> some View {
         searchBarNoFrame
             .background(
                 RoundedRectangle(cornerRadius: 25)
                     .fill(backgroundColor)
                     .shadow(
-                        color: accentColor.opacity(shadowOpacity),
-                        radius: 10, x: 0, y: 0
+                        color: accentColor.opacity(shadow.opacity),
+                        radius: shadow.radius, x: shadow.x, y: 5
                     )
             )
     }
