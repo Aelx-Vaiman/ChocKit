@@ -17,7 +17,7 @@ public struct ErrorView<ContentLabel, Description, Actions> : View where Content
     private let description: Description
     private let action: Actions
     
-    init(@ViewBuilder label: () -> ContentLabel, @ViewBuilder description: () -> Description = { EmptyView() },  @ViewBuilder action: () -> Actions = { EmptyView() }) {
+    public init(@ViewBuilder label: () -> ContentLabel, @ViewBuilder description: () -> Description = { EmptyView() },  @ViewBuilder action: () -> Actions = { EmptyView() }) {
         self.label = label()
         self.description = description()
         self.action = action()
