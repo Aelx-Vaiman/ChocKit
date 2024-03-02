@@ -97,15 +97,17 @@ public struct TabBarDefaultView: View {
         .background(
             ZStack {
                 if let backgroundColor = backgroundColor {
-                    backgroundColor
-                        .shadow(radius: shadowRadius)
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .fill(backgroundColor)
+                        .shadow(
+                            radius: shadowRadius, x: 0, y: -5
+                        )
                         .edgesIgnoringSafeArea(.all)
                 } else {
                     Color.clear
                 }
             }
         )
-        .cornerRadiusIfNeeded(cornerRadius: cornerRadius)
         .padding(outerPadding)
     }
 
@@ -115,18 +117,6 @@ public struct TabBarDefaultView: View {
     
 }
 
-extension View {
-    
-    @ViewBuilder func cornerRadiusIfNeeded(cornerRadius: CGFloat) -> some View {
-        if cornerRadius > 0 {
-            self
-                .cornerRadius(cornerRadius)
-        } else {
-            self
-        }
-    }
-    
-}
 
 struct TabBarDefaultView_Previews: PreviewProvider {
     static var previews: some View {
