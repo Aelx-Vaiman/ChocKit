@@ -35,7 +35,7 @@ ChocKit is available under the MIT license. See the LICENSE file for more info.
 
 ## Requirements
 
-- Ios16
+- Ios15
 
 ## Installation
 

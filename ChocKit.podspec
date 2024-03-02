@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.swift_versions   = '5.9' # Specify Swift version
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '16.0'
+  s.ios.deployment_target = '15.0'
 
   s.source_files =   'ChocKit/Sources/**/*'
   s.preserve_paths = 'ChocKit/Sources/**/*'

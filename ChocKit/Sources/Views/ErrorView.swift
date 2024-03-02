@@ -28,8 +28,7 @@ public struct ErrorView<ContentLabel, Description, Actions> : View where Content
             label
                 .labelStyle(ErrorLabelStyle())
                 //.labelStyle(.titleOnly)
-                .font(.title2)
-                .bold()
+                .font(Font.title2.weight(.semibold))
                 .lineLimit(3)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
@@ -87,9 +86,8 @@ private struct ErrorLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         VStack(spacing: 10) {
             configuration.icon
-                .font(.system(size: 120))
+                .font(.system(size: 120).weight(.light))
                 .foregroundStyle(.secondary)
-                .bold(false)
             
             configuration.title
         }
