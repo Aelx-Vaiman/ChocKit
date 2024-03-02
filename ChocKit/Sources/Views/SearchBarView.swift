@@ -26,15 +26,15 @@ public struct SearchBarView: View {
     private let accentColor: Color
     private let style: SearchBarViewStyle
 
-    public init(searchText: Binding<String>, placeholder: String = "Search", textColor: Color = .black, placeholderTextColor: Color = .gray, backgroundColor: Color = .white, accentColor: Color = .black, style: SearchBarViewStyle = .standard, height: CGFloat = 8) {
+    public init(searchText: Binding<String>, placeholder: String = "Search", textColor: Color = .black, placeholderTextColor: Color = .gray, backgroundColor: Color = .white, accentColor: Color = .black, height: CGFloat = 8, style: SearchBarViewStyle = .standard) {
         self._searchText = searchText
         self.placeholder = placeholder
         self.textColor = textColor
         self.placeholderTextColor = placeholderTextColor
         self.backgroundColor = backgroundColor
         self.accentColor = accentColor
-        self.style = style
         self.height = height
+        self.style = style
     }
 
     public var body: some View {
