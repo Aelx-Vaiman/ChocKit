@@ -24,7 +24,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '16.0'
 
-  s.source_files = 'ChocKit/Sources/**/*'
+  s.source_files =   'ChocKit/Sources/**/*'
+  s.preserve_paths = 'ChocKit/Sources/**/*'
   
   # s.resource_bundles = {
   #   'ChocKit' => ['ChocKit/Assets/*.png']
