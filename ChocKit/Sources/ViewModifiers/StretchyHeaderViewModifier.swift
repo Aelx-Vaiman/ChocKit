@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct StetchyHeaderViewModifier: ViewModifier {
+struct StretchyHeaderViewModifier: ViewModifier {
     
     var startingHeight: CGFloat = 300
     var coordinateSpace: CoordinateSpace = .global
@@ -41,7 +41,7 @@ struct StetchyHeaderViewModifier: ViewModifier {
 public extension View {
     
     func asStretchyHeader(startingHeight: CGFloat) -> some View {
-        modifier(StetchyHeaderViewModifier(startingHeight: startingHeight))
+        modifier(StretchyHeaderViewModifier(startingHeight: startingHeight))
     }
 }
 
