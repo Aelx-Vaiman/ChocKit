@@ -24,6 +24,7 @@ A library of reusable SwiftUI components that are missing from the SwiftUI frame
 - [Toggles](https://github.com/SwiftfulThinking/SwiftfulUI/wiki/Toggles)
 - [ViewModifiers](https://github.com/SwiftfulThinking/SwiftfulUI/wiki/ViewModifiers)
 - [Views](https://github.com/SwiftfulThinking/SwiftfulUI/wiki/Views)
+- [ErrorView](https://github.com/Aelx-Vaiman/ChocKit/wiki/ErrorView)
 
 ## Author
 
