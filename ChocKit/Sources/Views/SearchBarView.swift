@@ -101,10 +101,14 @@ public struct SearchBarView: View {
     }
 }
 
-public struct SearchBarView_Previews: PreviewProvider {
-    @State private static var searchText = ""
+public struct SearchBarView_Previews: PreviewProvider, View {
+    @State private var searchText = ""
 
     public static var previews: some View {
+        Self()
+    }
+
+    public var body: some View {
         Group {
             SearchBarView(searchText: $searchText, backgroundColor: .white, style: .shadow())
                 .padding()
@@ -115,3 +119,4 @@ public struct SearchBarView_Previews: PreviewProvider {
         }
     }
 }
+
