@@ -77,33 +77,36 @@ public struct AsyncLetViewBuilder<A, B>: View {
     }
 }
 
-#Preview {
-    return AsyncLetViewBuilder(
-        priority: .high,
-        redactedStyle: .never,
-        redactedOnFailure: true,
-        fetchA: {
-            try? await Task.sleep(nanoseconds: 1_000_000_000)
-            return "Alpha"
-        },
-        fetchB: {
-            try? await Task.sleep(nanoseconds: 2_000_000_000)
-            return "Beta"
-        },
-        content: { phase in
-            ZStack {
-                switch phase {
-                case .loading:
-                    Text("Loading")
-                case .success(let a, let b):
-                    HStack {
-                        Text(a)
-                        Text(b)
+
+public struct AsyncLetViewBuilder_Previews: PreviewProvider {
+    public static var previews: some View {
+        return AsyncLetViewBuilder(
+            priority: .high,
+            redactedStyle: .never,
+            redactedOnFailure: true,
+            fetchA: {
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                return "Alpha"
+            },
+            fetchB: {
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
+                return "Beta"
+            },
+            content: { phase in
+                ZStack {
+                    switch phase {
+                    case .loading:
+                        Text("Loading")
+                    case .success(let a, let b):
+                        HStack {
+                            Text(a)
+                            Text(b)
+                        }
+                    case .failure:
+                        Text("FAILURE")
                     }
-                case .failure:
-                    Text("FAILURE")
                 }
             }
-        }
-    )
+        )
+    }
 }

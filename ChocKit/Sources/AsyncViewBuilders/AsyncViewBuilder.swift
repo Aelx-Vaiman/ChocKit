@@ -1,6 +1,6 @@
 //
 //  AsyncViewBuilder.swift
-//  
+//
 //
 //  Created by Nick Sarno on 3/30/22.
 //
@@ -37,7 +37,7 @@ public struct AsyncViewBuilder<T>: View {
         self.fetch = fetch
         self.content = content
     }
-        
+    
     public var body: some View {
         AnyView(content(phase))
             .redacted(if: shouldBeRedacted, style: redactedStyle)
@@ -72,31 +72,35 @@ public struct AsyncViewBuilder<T>: View {
     }
 }
 
-#Preview {
-    return AsyncViewBuilder(
-        priority: .high,
-        redactedStyle: .never,
-        redactedOnFailure: true,
-        fetch: {
-            try? await Task.sleep(nanoseconds: 2_000_000_000)
-            return "heart.fill"
-        }, content: { phase in
-            ZStack {
-                switch phase {
-                case .loading:
-                    Image(systemName: "house.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                case .success(let imageName):
-                    Image(systemName: imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                case .failure:
-                    Text("FAILURE")
+
+public struct AsyncViewBuilder_Previews: PreviewProvider {
+    public static var previews: some View {
+        return AsyncViewBuilder(
+            priority: .high,
+            redactedStyle: .never,
+            redactedOnFailure: true,
+            fetch: {
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
+                return "heart.fill"
+            }, content: { phase in
+                ZStack {
+                    switch phase {
+                    case .loading:
+                        Image(systemName: "house.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                    case .success(let imageName):
+                        Image(systemName: imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                    case .failure:
+                        Text("FAILURE")
+                    }
                 }
             }
-        }
-    )
+        )
+    }
 }
+
