@@ -19,6 +19,7 @@ public struct SearchBarView: View {
     
     @Binding var searchText: String
     private let height: CGFloat
+    private let cornerRadius: Double
     private let placeholder: String
     private let textColor: Color
     private let placeholderTextColor: Color
@@ -26,7 +27,16 @@ public struct SearchBarView: View {
     private let accentColor: Color
     private let style: SearchBarViewStyle
 
-    public init(searchText: Binding<String>, placeholder: String = "Search", textColor: Color = .black, placeholderTextColor: Color = .gray, backgroundColor: Color = .white, accentColor: Color = .black, height: CGFloat = 8, style: SearchBarViewStyle = .standard) {
+    public init(searchText: Binding<String>, 
+                placeholder: String = "Search",
+                textColor: Color = .black,
+                placeholderTextColor: Color = .gray,
+                backgroundColor: Color = .white, 
+                accentColor: Color = .black,
+                height: CGFloat = 8, 
+                cornerRadius: Double = 25,
+                style: SearchBarViewStyle = .standard) {
+        
         self._searchText = searchText
         self.placeholder = placeholder
         self.textColor = textColor
@@ -34,33 +44,34 @@ public struct SearchBarView: View {
         self.backgroundColor = backgroundColor
         self.accentColor = accentColor
         self.height = height
+        self.cornerRadius = cornerRadius
         self.style = style
     }
 
     public var body: some View {
         switch style {
         case .standard:
-            standard
+            standard(cornerRadius: cornerRadius)
         case .shadow(let shadow):
-            self.shadow(shadow: shadow)
+            self.shadow(shadow: shadow, cornerRadius: cornerRadius)
         }
     }
     
-    private var standard: some View {
+    private func standard(cornerRadius: Double) -> some View {
         searchBarNoFrame
             .background(
-                RoundedRectangle(cornerRadius: 15)
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .stroke(accentColor, lineWidth: 2)
                     .background(backgroundColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
             )
         
     }
     
-    private func shadow(shadow: ChockShadow) -> some View {
+    private func shadow(shadow: ChockShadow, cornerRadius: Double) -> some View {
         searchBarNoFrame
             .background(
-                RoundedRectangle(cornerRadius: 25)
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(backgroundColor)
                     .shadow(
                         color: accentColor.opacity(shadow.opacity),
