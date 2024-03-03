@@ -66,33 +66,48 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
         ]
         
         var body: some View {
-            TabBarViewBuilder {
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.blue)
-                    .tabBarItem(tab: tabs[0], selection: selection)
-                    .edgesIgnoringSafeArea(.all)
-                
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.red)
-                    .onAppear {
-                        tabs[0].updateBadgeCount(to: 0)
-                    }
-                    .tabBarItem(tab: tabs[1], selection: selection)
-                    .edgesIgnoringSafeArea(.all)
-            } tabBar: {
-                TabBarDefaultView(
-                   tabs: tabs,
-                   selection: $selection,
-                   accentColor: .red,
-                   defaultColor: .white,
-                   backgroundColor: .indigo,
-                   font: .caption,
-                   iconSize: 20,
-                   spacing: 6,
-                   insetPadding: 12,
-                   outerPadding: 12,
-                   cornerRadius: 30,
-                   shadow: ChockShadow(radius: 8, y:  -5, opacity: 0.7))
+            ZStack {
+                Color.indigo.ignoresSafeArea().opacity(0.3)
+                TabBarViewBuilder {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .tabBarItem(tab: tabs[0], selection: selection)
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.red)
+                        .onAppear {
+                            tabs[0].updateBadgeCount(to: 20)
+                        }
+                        .tabBarItem(tab: tabs[1], selection: selection)
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.orange)
+                        .tabBarItem(tab: tabs[2], selection: selection)
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.green)
+                        .tabBarItem(tab: tabs[3], selection: selection)
+                        .edgesIgnoringSafeArea(.all)
+                    
+                } tabBar: {
+                    TabBarDefaultView(
+                       tabs: tabs,
+                       selection: $selection,
+                       accentColor: .red,
+                       defaultColor: .white,
+                       backgroundColor: .indigo,
+                       font: .subheadline,
+                       iconSize: 20,
+                       spacing: 6,
+                       insetPadding: 12,
+                       outerPadding: 12,
+                       cornerRadius: 30,
+                       shadow: ChockShadow(radius: 8, color: .black, y:  5, opacity: 0.7))
+                    
+            }
             }
         }
     }
