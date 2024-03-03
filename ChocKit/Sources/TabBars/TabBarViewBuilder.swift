@@ -9,14 +9,14 @@ import SwiftUI
 
 /// Custom tab bar with lazy loading.
 ///
-/// Tabs are loaded lazily, as they are selected. Each tab's .onAppear will only be called on first appearance. Set DisplayStyle to .vStack to position TabBar vertically below the Content. Use .zStack to put the TabBar in front of the Content . 
+/// Tabs are loaded lazily, as they are selected. Each tab's .onAppear will only be called on first appearance. Set DisplayStyle to .vStack to position TabBar vertically below the Content. Use .zStack to put the TabBar in front of the Content .
 public struct TabBarViewBuilder<Content:View, TabBar: View>: View {
     
     public enum DisplayStyle {
         case vStack
         case zStack
     }
-
+    
     let style: DisplayStyle
     let content: Content
     let tabBar: TabBar
@@ -25,11 +25,11 @@ public struct TabBarViewBuilder<Content:View, TabBar: View>: View {
         style: DisplayStyle = .vStack,
         @ViewBuilder content: () -> Content,
         @ViewBuilder tabBar: () -> TabBar) {
-        self.style = style
-        self.content = content()
-        self.tabBar = tabBar()
-    }
-        
+            self.style = style
+            self.content = content()
+            self.tabBar = tabBar()
+        }
+    
     public var body: some View {
         layout
     }
@@ -94,20 +94,20 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                     
                 } tabBar: {
                     TabBarDefaultView(
-                       tabs: tabs,
-                       selection: $selection,
-                       accentColor: .red,
-                       defaultColor: .white,
-                       backgroundColor: .indigo,
-                       font: .subheadline,
-                       iconSize: 20,
-                       spacing: 6,
-                       insetPadding: 12,
-                       outerPadding: 12,
-                       cornerRadius: 30,
-                       shadow: ChockShadow(radius: 8, color: .black, y:  5, opacity: 0.7))
+                        tabs: tabs,
+                        selection: $selection,
+                        accentColor: .red,
+                        defaultColor: .white,
+                        backgroundColor: .indigo,
+                        font: .subheadline,
+                        iconSize: 20,
+                        spacing: 6,
+                        insetPadding: 12,
+                        outerPadding: 12,
+                        cornerRadius: 30,
+                        shadow: ChockShadow(radius: 8, color: .black, y:  5, opacity: 0.7))
                     
-            }
+                }
             }
         }
     }
