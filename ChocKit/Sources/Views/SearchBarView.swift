@@ -14,7 +14,7 @@ public struct SearchBarView: View {
     
     public enum SearchBarViewStyle {
         case standard
-        case shadow(shadow: ChockShadow = ChockShadow(radius: 10))
+        case shadow(shadow: ChockShadow = ChockShadow(radius: 10, y: 3))
     }
     
     @Binding var searchText: String
