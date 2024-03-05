@@ -14,7 +14,7 @@ public struct SearchBarView: View {
     
     public enum SearchBarViewStyle {
         case standard
-        case shadow(shadow: ChockShadow = ChockShadow(radius: 10, opacity: 0.5))
+        case shadow(shadow: ChockShadow = ChockShadow(radius: 10))
     }
     
     @Binding var searchText: String
@@ -74,7 +74,7 @@ public struct SearchBarView: View {
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(backgroundColor)
                     .shadow(
-                        color: accentColor.opacity(shadow.opacity),
+                        color: accentColor,
                         radius: shadow.radius, x: shadow.x, y: 5
                     )
             )

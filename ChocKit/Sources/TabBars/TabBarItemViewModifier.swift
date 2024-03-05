@@ -8,14 +8,6 @@
 import Foundation
 import SwiftUI
 
-struct TabBarItemsPreferenceKey: PreferenceKey {
-    static var defaultValue: [AnyHashable] = []
-    
-    static func reduce(value: inout [AnyHashable], nextValue: () -> [AnyHashable]) {
-        value += nextValue()
-    }
-}
-
 struct TabBarItemViewModifier: ViewModifier {
     
     @State private var didLoad: Bool = false
@@ -26,7 +18,6 @@ struct TabBarItemViewModifier: ViewModifier {
         ZStack {
             if didLoad || selection == tab {
                 content
-                    .preference(key: TabBarItemsPreferenceKey.self, value: [tab])
                     .opacity(selection == tab ? 1 : 0)
                     .onAppear {
                         didLoad = true

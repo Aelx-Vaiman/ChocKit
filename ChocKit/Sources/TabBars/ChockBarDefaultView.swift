@@ -12,7 +12,7 @@ import SwiftUI
 ///
 ///  ```swift
 ///  // 'Default' style
-///  TabBarDefaultView(
+///  ChockBarDefaultView(
 ///     tabs: tabs,
 ///     selection: $selection,
 ///     accentColor: .blue,
@@ -26,7 +26,7 @@ import SwiftUI
 ///     shadow: ChockShadow() 
 ///
 ///  // 'Floating' style
-///  TabBarDefaultView(
+///  ChockBarDefaultView(
 ///     tabs: tabs,
 ///     selection: $selection,
 ///     accentColor: .blue,
@@ -40,10 +40,10 @@ import SwiftUI
 ///     cornerRadius: 30,
 ///     shadow: ChockShadow(radius: 8, y:  -5, opacity: 0.7)
 ///  ```
-public struct TabBarDefaultView: View {
+public struct ChockBarDefaultView: View {
     
-    let tabs: [TabBarItem]
-    @Binding var selection: TabBarItem
+    let tabs: [ChockBarItem]
+    @Binding var selection: ChockBarItem
     let accentColor: Color
     let defaultColor: Color
     let backgroundColor: Color?
@@ -56,8 +56,8 @@ public struct TabBarDefaultView: View {
     let shadow: ChockShadow
     
     public init(
-        tabs: [TabBarItem],
-        selection: Binding<TabBarItem>,
+        tabs: [ChockBarItem],
+        selection: Binding<ChockBarItem>,
         accentColor: Color = .blue,
         defaultColor: Color = .gray,
         backgroundColor: Color? = nil,
@@ -97,12 +97,11 @@ public struct TabBarDefaultView: View {
         .background(
             ZStack {
                 if let backgroundColor = backgroundColor {
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .fill(backgroundColor)
+                    backgroundColor
+                        .cornerRadius(cornerRadius)
                         .shadow(
                             color: shadow.color, radius: shadow.radius, x: shadow.x, y: shadow.y
-                        ).opacity(shadow.opacity)
-                        .edgesIgnoringSafeArea(.all)
+                        )
                 } else {
                     Color.clear
                 }
@@ -111,7 +110,7 @@ public struct TabBarDefaultView: View {
         .padding(outerPadding)
     }
 
-    private func switchToTab(tab: TabBarItem) {
+    private func switchToTab(tab: ChockBarItem) {
         selection = tab
     }
     
@@ -124,9 +123,9 @@ struct TabBarDefaultView_Previews: PreviewProvider {
     }
 }
 
-private extension TabBarDefaultView {
+private extension ChockBarDefaultView {
     
-    private func tabView(_ tab: TabBarItem) -> some View {
+    private func tabView(_ tab: ChockBarItem) -> some View {
         VStack(spacing: spacing) {
             if let icon = tab.iconName {
                 Image(systemName: icon)

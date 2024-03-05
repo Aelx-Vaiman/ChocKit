@@ -10,13 +10,14 @@ import SwiftUI
 /// Custom tab bar with lazy loading.
 ///
 /// Tabs are loaded lazily, as they are selected. Each tab's .onAppear will only be called on first appearance. Set DisplayStyle to .vStack to position TabBar vertically below the Content. Use .zStack to put the TabBar in front of the Content .
-public struct TabBarViewBuilder<Content:View, TabBar: View>: View {
+public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
     
     public enum DisplayStyle {
         case vStack
         case zStack
     }
     
+    @State private var isKeyboardVisible = false
     let style: DisplayStyle
     let content: Content
     let tabBar: TabBar
@@ -43,12 +44,17 @@ public struct TabBarViewBuilder<Content:View, TabBar: View>: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-                tabBar
+                if !isKeyboardVisible {
+                    tabBar
+                }
             }
         case .zStack:
             ZStack(alignment: .bottom) {
                 content
-                tabBar
+                
+                if !isKeyboardVisible {
+                    tabBar
+                }
             }
         }
     }
@@ -57,18 +63,18 @@ public struct TabBarViewBuilder<Content:View, TabBar: View>: View {
 struct TabBarViewBuilder_Previews: PreviewProvider {
     
     struct PreviewView: View {
-        @State var selection: TabBarItem = TabBarItem(title: "Home", iconName: "heart.fill")
-        @State private var tabs: [TabBarItem] = [
-            TabBarItem(title: "Home", iconName: "heart.fill", badgeCount: 2),
-            TabBarItem(title: "Browse", iconName: "magnifyingglass"),
-            TabBarItem(title: "Discover", iconName: "globe", badgeCount: 100),
-            TabBarItem(title: "Profile", iconName: "person.fill")
+        @State var selection: ChockBarItem = ChockBarItem(title: "Home", iconName: "heart.fill")
+        @State private var tabs: [ChockBarItem] = [
+            ChockBarItem(title: "Home", iconName: "heart.fill", badgeCount: 2),
+            ChockBarItem(title: "Browse", iconName: "magnifyingglass"),
+            ChockBarItem(title: "Discover", iconName: "globe", badgeCount: 100),
+            ChockBarItem(title: "Profile", iconName: "person.fill")
         ]
         
         var body: some View {
             ZStack {
                 Color.indigo.ignoresSafeArea().opacity(0.3)
-                TabBarViewBuilder {
+                ChockTabView {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.blue)
                         .tabBarItem(tab: tabs[0], selection: selection)
@@ -93,7 +99,7 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                         .edgesIgnoringSafeArea(.all)
                     
                 } tabBar: {
-                    TabBarDefaultView(
+                    ChockBarDefaultView(
                         tabs: tabs,
                         selection: $selection,
                         accentColor: .red,
@@ -105,7 +111,7 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                         insetPadding: 12,
                         outerPadding: 12,
                         cornerRadius: 30,
-                        shadow: ChockShadow(radius: 8, color: .black, y:  5, opacity: 0.7))
+                        shadow: ChockShadow(radius: 8, color: .black, y:  5))
                     
                 }
             }

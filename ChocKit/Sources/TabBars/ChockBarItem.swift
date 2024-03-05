@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public struct TabBarItem: Hashable {
+public struct ChockBarItem: Hashable {
     public let title: String?
     public let iconName: String?
     public let image: UIImage?
