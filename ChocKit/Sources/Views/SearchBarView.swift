@@ -74,8 +74,8 @@ public struct SearchBarView: View {
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(backgroundColor)
                     .shadow(
-                        color: accentColor,
-                        radius: shadow.radius, x: shadow.x, y: 5
+                        color: shadow.color,
+                        radius: shadow.radius, x: shadow.x, y: shadow.y
                     )
             )
     }
