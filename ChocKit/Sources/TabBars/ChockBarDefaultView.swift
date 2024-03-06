@@ -132,9 +132,7 @@ private extension ChockBarDefaultView {
                 .scaledToFit()
                 .frame(width: iconSize, height: iconSize)
             
-            if let title = tab.title {
-                Text(title)
-            }
+            Text(tab.title)
         }
         .font(font)
         .foregroundColor(selection.isSame(other: tab)  ? accentColor : defaultColor)

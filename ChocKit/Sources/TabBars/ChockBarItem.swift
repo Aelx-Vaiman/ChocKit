@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct ChockBarItem: Hashable {
     public let title: String
-    public let var image: Image
+    public let image: Image
     
     private var badgeCount: Int?
     // used for hash.
@@ -21,14 +21,14 @@ public struct ChockBarItem: Hashable {
     }
     
     
-    public init(title: String?, resource: String, badgeCount: Int? = nil) {
+    public init(title: String, resource: String, badgeCount: Int? = nil) {
         self.resourceName = resource
         self.title = title
         self.image = Image(resource)
         self.badgeCount = badgeCount
     }
     
-    public init(title: String?, systemName: String = "", badgeCount: Int? = nil) {
+    public init(title: String, systemName: String = "", badgeCount: Int? = nil) {
         self.resourceName = systemName
         self.title = title
         self.image = Image(systemName: systemName)
