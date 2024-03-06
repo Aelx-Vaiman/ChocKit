@@ -41,7 +41,7 @@ public struct ChockBarItem: Hashable {
     
     // "is equal" for selected tab, this function must ignore badgeCount, due to inner implementation!
     // when ever you need to check is the selected tab equal to other tab you must use this function!
-    internal func isSame(other: ChockBarItem) -> Bool {
+    public func isSame(other: ChockBarItem) -> Bool {
         return title == other.title
         && resourceName == other.resourceName
     }
