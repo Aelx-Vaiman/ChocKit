@@ -7,7 +7,7 @@ A library of reusable SwiftUI components that are missing from the SwiftUI frame
 - See the [Wiki](https://github.com/SwiftfulThinking/SwiftfulUI/wiki) for full documentation.
 - See the SwiftUI Previews within source files for example implementations.
 
-# New 
+### New (0.1.6.)
 - ChockKit TabView offers unparalleled customization, allowing you to shape your tab bar's aesthetics precisely to your liking. Whether you prefer a minimalist approach or a burst of colors, CustomTabView empowers you to craft a tab bar that seamlessly aligns with your app's visual identity, effortlessly.
 
 - Experience the seamless integration of ChockKit with SwiftUI's view lifecycle updates. By seamlessly incorporating methods such as `onAppear(perform:)`, `onDisappear(perform:)`, and `task(priority:_:)`, ChockKit ensures that every tab switch triggers these lifecycle events, enriching your app's responsiveness and functionality.
