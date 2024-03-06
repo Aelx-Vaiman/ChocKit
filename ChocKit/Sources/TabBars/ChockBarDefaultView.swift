@@ -42,18 +42,18 @@ import SwiftUI
 ///  ```
 public struct ChockBarDefaultView: View {
     
-    let tabs: [ChockBarItem]
-    @Binding var selection: ChockBarItem
-    let accentColor: Color
-    let defaultColor: Color
-    let backgroundColor: Color?
-    let font: Font
-    let iconSize: CGFloat
-    let spacing: CGFloat
-    let insetPadding: CGFloat
-    let outerPadding: CGFloat
-    let cornerRadius: CGFloat
-    let shadow: ChockShadow
+    private let tabs: [ChockBarItem]
+    @Binding private var selection: ChockBarItem
+    private let accentColor: Color
+    private let defaultColor: Color
+    private let backgroundColor: Color?
+    private let font: Font
+    private let iconSize: CGFloat
+    private let spacing: CGFloat
+    private let insetPadding: CGFloat
+    private let outerPadding: CGFloat
+    private let cornerRadius: CGFloat
+    private let shadow: ChockShadow
     
     public init(
         tabs: [ChockBarItem],
@@ -144,7 +144,7 @@ private extension ChockBarDefaultView {
             }
         }
         .font(font)
-        .foregroundColor(selection == tab ? accentColor : defaultColor)
+        .foregroundColor(selection.isSame(other: tab)  ? accentColor : defaultColor)
         .frame(maxWidth: .infinity)
         .padding(.vertical, insetPadding)
         .overlay(

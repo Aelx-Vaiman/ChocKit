@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 /// Custom tab bar with lazy loading.
 ///
@@ -17,17 +18,21 @@ public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
         case zStack
     }
     
+    @Binding private var selection: ChockBarItem
     @State private var isKeyboardVisible = false
-    let style: DisplayStyle
-    let content: Content
-    let tabBar: TabBar
+    
+    private let style: DisplayStyle
+    private let tabBar: TabBar
+    private let screenViews: Content
     
     public init(
+        selection: Binding<ChockBarItem>,
         style: DisplayStyle = .vStack,
-        @ViewBuilder content: () -> Content,
+        @ViewBuilder content: @escaping () -> Content,
         @ViewBuilder tabBar: () -> TabBar) {
+            self._selection = selection
             self.style = style
-            self.content = content()
+            self.screenViews = content()
             self.tabBar = tabBar()
         }
     
@@ -40,7 +45,7 @@ public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
         case .vStack:
             VStack(spacing: 0) {
                 ZStack {
-                    content
+                    getCurrentScreen(content: screenViews)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
@@ -48,13 +53,31 @@ public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
                     tabBar
                 }
             }
+            .onReceive(keyboardPublisher) { isKeyboardVisible in
+                self.isKeyboardVisible  = isKeyboardVisible
+            }
+            
         case .zStack:
             ZStack(alignment: .bottom) {
-                content
+                getCurrentScreen(content: screenViews)
                 
                 if !isKeyboardVisible {
                     tabBar
                 }
+            }
+            .onReceive(keyboardPublisher) { isKeyboardVisible in
+                self.isKeyboardVisible  = isKeyboardVisible
+            }
+        }
+    }
+}
+
+extension ChockTabView {
+    private func getCurrentScreen<Screens: View>(content: Screens) -> some View {
+        content.variadic { children in
+            children.first { child in
+                let tag: ChockBarItem? = child[ChockTag.self].flatMap { $0 as? ChockBarItem }
+                return tag?.isSame(other: selection) ?? false
             }
         }
     }
@@ -74,29 +97,34 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
         var body: some View {
             ZStack {
                 Color.indigo.ignoresSafeArea().opacity(0.3)
-                ChockTabView {
+                ChockTabView(selection: $selection) {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.blue)
-                        .tabBarItem(tab: tabs[0], selection: selection)
                         .edgesIgnoringSafeArea(.all)
+                        .chockBarItem(tabs[0])
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                tabs[0].updateBadgeCount(to: (tabs[0].badgeCount ?? 0) + 1)
+                            }
+                        }
+                        .onDisappear() {
+                            
+                        }
                     
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.red)
-                        .onAppear {
-                            tabs[0].updateBadgeCount(to: 20)
-                        }
-                        .tabBarItem(tab: tabs[1], selection: selection)
                         .edgesIgnoringSafeArea(.all)
+                        .chockBarItem(tabs[1])
                     
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.orange)
-                        .tabBarItem(tab: tabs[2], selection: selection)
                         .edgesIgnoringSafeArea(.all)
+                        .chockBarItem(tabs[2])
                     
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.green)
-                        .tabBarItem(tab: tabs[3], selection: selection)
                         .edgesIgnoringSafeArea(.all)
+                        .chockBarItem(tabs[3])
                     
                 } tabBar: {
                     ChockBarDefaultView(

@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 public struct ChockBarItem: Hashable {
-    public let title: String?
-    public let iconName: String?
-    public let image: UIImage?
-    public private(set) var badgeCount: Int?
+    private(set) var title: String?
+    private(set) var iconName: String?
+    private(set) var image: UIImage?
+    private(set) var badgeCount: Int?
     
     public init(title: String?, iconName: String? = nil, image: UIImage? = nil, badgeCount: Int? = nil) {
         self.title = title
@@ -23,5 +23,12 @@ public struct ChockBarItem: Hashable {
     
     public mutating func updateBadgeCount(to count: Int) {
         badgeCount = count
+    }
+    
+    // is equal for selected tab, must ignore badgeCount!
+    internal func isSame(other: ChockBarItem) -> Bool {
+        return title == other.title
+        && iconName == other.iconName
+        && image == other.image
     }
 }

@@ -13,6 +13,11 @@
 		211A5AFD2B923A3B00A9BF22 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */; };
 		216E29052B9342A700118E28 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29042B9342A700118E28 /* Global.swift */; };
 		216E29722B974E6500118E28 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29712B974E6500118E28 /* KeyboardReadable.swift */; };
+		216E29A22B987C8400118E28 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A12B987C8400118E28 /* View.swift */; };
+		216E29A72B987CFA00118E28 /* ChockBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A32B987CFA00118E28 /* ChockBarItem.swift */; };
+		216E29A82B987CFA00118E28 /* ChockTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A42B987CFA00118E28 /* ChockTabView.swift */; };
+		216E29A92B987CFA00118E28 /* ChockTagModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A52B987CFA00118E28 /* ChockTagModifier.swift */; };
+		216E29AA2B987CFA00118E28 /* ChockBarDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */; };
 		21F7C0A12B92020900DAAE2A /* HapticOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06A2B92020900DAAE2A /* HapticOption.swift */; };
 		21F7C0A22B92020900DAAE2A /* HapticViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */; };
 		21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06C2B92020900DAAE2A /* Haptics.swift */; };
@@ -38,10 +43,6 @@
 		21F7C0B72B92020900DAAE2A /* DragGestureViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C08A2B92020900DAAE2A /* DragGestureViewModifier.swift */; };
 		21F7C0B82B92020900DAAE2A /* MagnificationGestureViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C08B2B92020900DAAE2A /* MagnificationGestureViewModifier.swift */; };
 		21F7C0B92B92020900DAAE2A /* RedactedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C08D2B92020900DAAE2A /* RedactedViewModifier.swift */; };
-		21F7C0BA2B92020900DAAE2A /* ChockBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C08F2B92020900DAAE2A /* ChockBarItem.swift */; };
-		21F7C0BB2B92020900DAAE2A /* TabBarItemViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C0902B92020900DAAE2A /* TabBarItemViewModifier.swift */; };
-		21F7C0BC2B92020900DAAE2A /* ChockTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C0912B92020900DAAE2A /* ChockTabView.swift */; };
-		21F7C0BD2B92020900DAAE2A /* ChockBarDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C0922B92020900DAAE2A /* ChockBarDefaultView.swift */; };
 		21F7C0BE2B92020900DAAE2A /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C0942B92020900DAAE2A /* CustomProgressBar.swift */; };
 		21F7C0BF2B92020900DAAE2A /* FontRegularViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C0962B92020900DAAE2A /* FontRegularViewModifier.swift */; };
 		21F7C0C02B92020900DAAE2A /* FontAnimatableViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C0972B92020900DAAE2A /* FontAnimatableViewModifier.swift */; };
@@ -92,6 +93,11 @@
 		211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		216E29042B9342A700118E28 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		216E29712B974E6500118E28 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
+		216E29A12B987C8400118E28 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		216E29A32B987CFA00118E28 /* ChockBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarItem.swift; sourceTree = "<group>"; };
+		216E29A42B987CFA00118E28 /* ChockTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTabView.swift; sourceTree = "<group>"; };
+		216E29A52B987CFA00118E28 /* ChockTagModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTagModifier.swift; sourceTree = "<group>"; };
+		216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarDefaultView.swift; sourceTree = "<group>"; };
 		21AB03E018B4ECF5AB9473F560001F8C /* ChocKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChocKit.release.xcconfig; sourceTree = "<group>"; };
 		21F7C06A2B92020900DAAE2A /* HapticOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticOption.swift; sourceTree = "<group>"; };
 		21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticViewModifier.swift; sourceTree = "<group>"; };
@@ -118,10 +124,6 @@
 		21F7C08A2B92020900DAAE2A /* DragGestureViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragGestureViewModifier.swift; sourceTree = "<group>"; };
 		21F7C08B2B92020900DAAE2A /* MagnificationGestureViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnificationGestureViewModifier.swift; sourceTree = "<group>"; };
 		21F7C08D2B92020900DAAE2A /* RedactedViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedactedViewModifier.swift; sourceTree = "<group>"; };
-		21F7C08F2B92020900DAAE2A /* ChockBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarItem.swift; sourceTree = "<group>"; };
-		21F7C0902B92020900DAAE2A /* TabBarItemViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModifier.swift; sourceTree = "<group>"; };
-		21F7C0912B92020900DAAE2A /* ChockTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTabView.swift; sourceTree = "<group>"; };
-		21F7C0922B92020900DAAE2A /* ChockBarDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarDefaultView.swift; sourceTree = "<group>"; };
 		21F7C0942B92020900DAAE2A /* CustomProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		21F7C0962B92020900DAAE2A /* FontRegularViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontRegularViewModifier.swift; sourceTree = "<group>"; };
 		21F7C0972B92020900DAAE2A /* FontAnimatableViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAnimatableViewModifier.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */,
+				216E29A12B987C8400118E28 /* View.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -366,10 +369,10 @@
 		21F7C08E2B92020900DAAE2A /* TabBars */ = {
 			isa = PBXGroup;
 			children = (
-				21F7C08F2B92020900DAAE2A /* ChockBarItem.swift */,
-				21F7C0902B92020900DAAE2A /* TabBarItemViewModifier.swift */,
-				21F7C0912B92020900DAAE2A /* ChockTabView.swift */,
-				21F7C0922B92020900DAAE2A /* ChockBarDefaultView.swift */,
+				216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */,
+				216E29A32B987CFA00118E28 /* ChockBarItem.swift */,
+				216E29A42B987CFA00118E28 /* ChockTabView.swift */,
+				216E29A52B987CFA00118E28 /* ChockTagModifier.swift */,
 			);
 			path = TabBars;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				21F7C0A82B92020900DAAE2A /* ScrollViewWithOnScrollChanged.swift in Sources */,
 				21F7C0AB2B92020900DAAE2A /* AsyncLetViewBuilder.swift in Sources */,
 				21F7C0A72B92020900DAAE2A /* ScrollViewWithScrollToLocation.swift in Sources */,
+				216E29A82B987CFA00118E28 /* ChockTabView.swift in Sources */,
 				21F7C0B42B92020900DAAE2A /* BackgroundBorderViewModifier.swift in Sources */,
 				21F7C0C32B92020900DAAE2A /* CountdownViewBuilder.swift in Sources */,
 				21F7C0C42B92020900DAAE2A /* OnFirstDisappearViewModifier.swift in Sources */,
@@ -699,11 +703,12 @@
 				216E29052B9342A700118E28 /* Global.swift in Sources */,
 				21F7C0AD2B92020900DAAE2A /* AsyncViewBuilder.swift in Sources */,
 				211A5AF32B92323000A9BF22 /* SearchBarView.swift in Sources */,
+				216E29A72B987CFA00118E28 /* ChockBarItem.swift in Sources */,
 				21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */,
+				216E29AA2B987CFA00118E28 /* ChockBarDefaultView.swift in Sources */,
 				21F7C0A52B92020900DAAE2A /* AnyRecursiveModel.swift in Sources */,
 				21F7C0B02B92020900DAAE2A /* BackgroundBorderAndFillViewModifier.swift in Sources */,
 				21F7C0C62B92020900DAAE2A /* StretchyHeaderViewModifier.swift in Sources */,
-				21F7C0BC2B92020900DAAE2A /* ChockTabView.swift in Sources */,
 				21F7C0BF2B92020900DAAE2A /* FontRegularViewModifier.swift in Sources */,
 				211A5AFD2B923A3B00A9BF22 /* UIApplication.swift in Sources */,
 				21F7C0B12B92020900DAAE2A /* BackgroundBorderAndLinearGradientFillViewModifier.swift in Sources */,
@@ -714,21 +719,20 @@
 				21F7C0C02B92020900DAAE2A /* FontAnimatableViewModifier.swift in Sources */,
 				211A5AF22B92323000A9BF22 /* ErrorView.swift in Sources */,
 				21F7C0B32B92020900DAAE2A /* BackgroundFillViewModifier.swift in Sources */,
-				21F7C0BD2B92020900DAAE2A /* ChockBarDefaultView.swift in Sources */,
 				21F7C0B72B92020900DAAE2A /* DragGestureViewModifier.swift in Sources */,
 				21F7C0B62B92020900DAAE2A /* RotationGestureViewModifier.swift in Sources */,
 				21F7C0C52B92020900DAAE2A /* OnFirstAppearViewModifier.swift in Sources */,
 				21F7C0A22B92020900DAAE2A /* HapticViewModifier.swift in Sources */,
+				216E29A22B987C8400118E28 /* View.swift in Sources */,
 				216E29722B974E6500118E28 /* KeyboardReadable.swift in Sources */,
 				21F7C0A12B92020900DAAE2A /* HapticOption.swift in Sources */,
+				216E29A92B987CFA00118E28 /* ChockTagModifier.swift in Sources */,
 				21F7C0A92B92020900DAAE2A /* LocationReader.swift in Sources */,
 				21F7C0BE2B92020900DAAE2A /* CustomProgressBar.swift in Sources */,
 				21F7C0A62B92020900DAAE2A /* ButtonStyleViewModifier.swift in Sources */,
-				21F7C0BA2B92020900DAAE2A /* ChockBarItem.swift in Sources */,
 				21F7C0C12B92020900DAAE2A /* FlipView.swift in Sources */,
 				21F7C0B22B92020900DAAE2A /* BackgroundLinearGradientFillViewModifier.swift in Sources */,
 				21F7C0A42B92020900DAAE2A /* AnyRecursiveView.swift in Sources */,
-				21F7C0BB2B92020900DAAE2A /* TabBarItemViewModifier.swift in Sources */,
 				21F7C0B92B92020900DAAE2A /* RedactedViewModifier.swift in Sources */,
 				21F7C0AC2B92020900DAAE2A /* AsyncButton.swift in Sources */,
 				21F7C0B82B92020900DAAE2A /* MagnificationGestureViewModifier.swift in Sources */,
