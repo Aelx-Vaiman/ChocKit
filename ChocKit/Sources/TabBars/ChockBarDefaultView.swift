@@ -149,7 +149,7 @@ private extension ChockBarDefaultView {
         .padding(.vertical, insetPadding)
         .overlay(
             ZStack {
-                if let count = tab.badgeCount, count > 0 {
+                if let count = tab.currentBadgeCount, count > 0 {
                     Text("\(count)")
                         .foregroundColor(.white)
                         .font(.caption)

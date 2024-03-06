@@ -12,7 +12,11 @@ public struct ChockBarItem: Hashable {
     private(set) var title: String?
     private(set) var iconName: String?
     private(set) var image: UIImage?
-    public(set) var badgeCount: Int?
+    private var badgeCount: Int?
+    
+    public var currentBadgeCount: Int? {
+        badgeCount 
+    }
     
     public init(title: String?, iconName: String? = nil, image: UIImage? = nil, badgeCount: Int? = nil) {
         self.title = title

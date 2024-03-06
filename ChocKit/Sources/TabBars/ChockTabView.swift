@@ -104,7 +104,7 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                         .chockBarItem(tabs[0])
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                tabs[0].updateBadgeCount(to: (tabs[0].badgeCount ?? 0) + 1)
+                                tabs[0].updateBadgeCount(to: (tabs[0].currentBadgeCount ?? 0) + 1)
                             }
                         }
                         .onDisappear() {
