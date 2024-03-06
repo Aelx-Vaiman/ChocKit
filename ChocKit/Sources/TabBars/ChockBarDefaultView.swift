@@ -12,7 +12,7 @@ import SwiftUI
 ///
 ///  ```swift
 ///  // 'Default' style
-///  TabBarDefaultView(
+///  ChockBarDefaultView(
 ///     tabs: tabs,
 ///     selection: $selection,
 ///     accentColor: .blue,
@@ -26,7 +26,7 @@ import SwiftUI
 ///     shadow: ChockShadow() 
 ///
 ///  // 'Floating' style
-///  TabBarDefaultView(
+///  ChockBarDefaultView(
 ///     tabs: tabs,
 ///     selection: $selection,
 ///     accentColor: .blue,
@@ -40,24 +40,24 @@ import SwiftUI
 ///     cornerRadius: 30,
 ///     shadow: ChockShadow(radius: 8, y:  -5, opacity: 0.7)
 ///  ```
-public struct TabBarDefaultView: View {
+public struct ChockBarDefaultView: View {
     
-    let tabs: [TabBarItem]
-    @Binding var selection: TabBarItem
-    let accentColor: Color
-    let defaultColor: Color
-    let backgroundColor: Color?
-    let font: Font
-    let iconSize: CGFloat
-    let spacing: CGFloat
-    let insetPadding: CGFloat
-    let outerPadding: CGFloat
-    let cornerRadius: CGFloat
-    let shadow: ChockShadow
+    private let tabs: [ChockBarItem]
+    @Binding private var selection: ChockBarItem
+    private let accentColor: Color
+    private let defaultColor: Color
+    private let backgroundColor: Color?
+    private let font: Font
+    private let iconSize: CGFloat
+    private let spacing: CGFloat
+    private let insetPadding: CGFloat
+    private let outerPadding: CGFloat
+    private let cornerRadius: CGFloat
+    private let shadow: ChockShadow
     
     public init(
-        tabs: [TabBarItem],
-        selection: Binding<TabBarItem>,
+        tabs: [ChockBarItem],
+        selection: Binding<ChockBarItem>,
         accentColor: Color = .blue,
         defaultColor: Color = .gray,
         backgroundColor: Color? = nil,
@@ -97,12 +97,11 @@ public struct TabBarDefaultView: View {
         .background(
             ZStack {
                 if let backgroundColor = backgroundColor {
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .fill(backgroundColor)
+                    backgroundColor
+                        .cornerRadius(cornerRadius)
                         .shadow(
                             color: shadow.color, radius: shadow.radius, x: shadow.x, y: shadow.y
-                        ).opacity(shadow.opacity)
-                        .edgesIgnoringSafeArea(.all)
+                        )
                 } else {
                     Color.clear
                 }
@@ -111,46 +110,30 @@ public struct TabBarDefaultView: View {
         .padding(outerPadding)
     }
 
-    private func switchToTab(tab: TabBarItem) {
+    private func switchToTab(tab: ChockBarItem) {
         selection = tab
     }
     
 }
 
-
-struct TabBarDefaultView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarViewBuilder_Previews.previews
-    }
-}
-
-private extension TabBarDefaultView {
+private extension ChockBarDefaultView {
     
-    private func tabView(_ tab: TabBarItem) -> some View {
+    private func tabView(_ tab: ChockBarItem) -> some View {
         VStack(spacing: spacing) {
-            if let icon = tab.iconName {
-                Image(systemName: icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: iconSize, height: iconSize)
-            }
-            if let image = tab.image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: iconSize, height: iconSize)
-            }
-            if let title = tab.title {
-                Text(title)
-            }
+            tab.image
+                .resizable()
+                .scaledToFit()
+                .frame(width: iconSize, height: iconSize)
+            
+            Text(tab.title)
         }
         .font(font)
-        .foregroundColor(selection == tab ? accentColor : defaultColor)
+        .foregroundColor(selection.isSame(other: tab)  ? accentColor : defaultColor)
         .frame(maxWidth: .infinity)
         .padding(.vertical, insetPadding)
         .overlay(
             ZStack {
-                if let count = tab.badgeCount, count > 0 {
+                if let count = tab.currentBadgeCount, count > 0 {
                     Text("\(count)")
                         .foregroundColor(.white)
                         .font(.caption)
@@ -163,4 +146,10 @@ private extension TabBarDefaultView {
         )
     }
     
+}
+
+struct TabBarDefaultView_Previews: PreviewProvider {
+    static var previews: some View {
+        TabBarViewBuilder_Previews.previews
+    }
 }
