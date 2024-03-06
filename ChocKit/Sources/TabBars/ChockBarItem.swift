@@ -44,7 +44,6 @@ public struct ChockBarItem: Hashable {
     internal func isSame(other: ChockBarItem) -> Bool {
         return title == other.title
         && resourceName == other.resourceName
-        && image == other.image
     }
     
     public func hash(into hasher: inout Hasher) {
