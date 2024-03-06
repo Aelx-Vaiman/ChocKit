@@ -86,12 +86,12 @@ extension ChockTabView {
 struct TabBarViewBuilder_Previews: PreviewProvider {
     
     struct PreviewView: View {
-        @State var selection: ChockBarItem = ChockBarItem(title: "Home", iconName: "heart.fill")
+        @State var selection: ChockBarItem = ChockBarItem(title: "Home", systemName: "heart.fill")
         @State private var tabs: [ChockBarItem] = [
-            ChockBarItem(title: "Home", iconName: "heart.fill", badgeCount: 2),
-            ChockBarItem(title: "Browse", iconName: "magnifyingglass"),
-            ChockBarItem(title: "Discover", iconName: "globe", badgeCount: 100),
-            ChockBarItem(title: "Profile", iconName: "person.fill")
+            ChockBarItem(title: "Home", systemName: "heart.fill", badgeCount: 2),
+            ChockBarItem(title: "Browse", systemName: "magnifyingglass"),
+            ChockBarItem(title: "Discover", systemName: "globe", badgeCount: 100),
+            ChockBarItem(title: "Profile", systemName: "person.fill")
         ]
         
         var body: some View {

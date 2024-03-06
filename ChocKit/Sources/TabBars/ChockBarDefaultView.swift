@@ -127,18 +127,11 @@ private extension ChockBarDefaultView {
     
     private func tabView(_ tab: ChockBarItem) -> some View {
         VStack(spacing: spacing) {
-            if let icon = tab.iconName {
-                Image(systemName: icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: iconSize, height: iconSize)
-            }
-            if let image = tab.image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: iconSize, height: iconSize)
-            }
+            tab.image
+                .resizable()
+                .scaledToFit()
+                .frame(width: iconSize, height: iconSize)
+            
             if let title = tab.title {
                 Text(title)
             }
