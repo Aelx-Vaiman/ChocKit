@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 public struct ChockBarItem: Hashable {
-    private(set) var title: String?
-    private(set) var image: Image
-    private var badgeCount: Int?
+    public let title: String
+    public let var image: Image
     
+    private var badgeCount: Int?
     // used for hash.
     private let resourceName: String
     
