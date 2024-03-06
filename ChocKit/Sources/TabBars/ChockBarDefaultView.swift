@@ -116,13 +116,6 @@ public struct ChockBarDefaultView: View {
     
 }
 
-
-struct TabBarDefaultView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarViewBuilder_Previews.previews
-    }
-}
-
 private extension ChockBarDefaultView {
     
     private func tabView(_ tab: ChockBarItem) -> some View {
@@ -153,4 +146,10 @@ private extension ChockBarDefaultView {
         )
     }
     
+}
+
+struct TabBarDefaultView_Previews: PreviewProvider {
+    static var previews: some View {
+        TabBarViewBuilder_Previews.previews
+    }
 }
