@@ -8,9 +8,8 @@
 import SwiftUI
 import UIKit
 
-/// Custom tab bar with lazy loading.
-///
-/// Tabs are loaded lazily, as they are selected. Each tab's .onAppear will only be called on first appearance. Set DisplayStyle to .vStack to position TabBar vertically below the Content. Use .zStack to put the TabBar in front of the Content .
+/// Set DisplayStyle to .vStack to position TabBar vertically below the Content. Use .zStack to put the TabBar in front of the Content .
+/// 
 public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
     
     public enum DisplayStyle {

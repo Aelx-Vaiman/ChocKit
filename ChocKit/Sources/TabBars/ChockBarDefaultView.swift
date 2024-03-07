@@ -38,7 +38,7 @@ import SwiftUI
 ///     insetPadding: 12,
 ///     outerPadding: 12,
 ///     cornerRadius: 30,
-///     shadow: ChockShadow(radius: 8, y:  -5, opacity: 0.7)
+///     shadow: ChockShadow(radius: 8, y:  -5)
 ///  ```
 public struct ChockBarDefaultView: View {
     
