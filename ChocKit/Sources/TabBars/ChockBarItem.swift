@@ -31,8 +31,26 @@ public struct ChockBarItem: ChockTabProtocol, Hashable {
         self.badgeCount = badgeCount
     }
     
+    // the default tagID is title, can be overridden. by choosing appropriate init.
+    public init(title: String, resource: String, badgeCount: Int? = nil) {
+        self.tagID = title
+        self.resourceName = resource
+        self.title = title
+        self.image = Image(resource)
+        self.badgeCount = badgeCount
+    }
+    
     public init(tagID: String, title: String, systemName: String = "", badgeCount: Int? = nil) {
         self.tagID = tagID
+        self.resourceName = systemName
+        self.title = title
+        self.image = Image(systemName: systemName)
+        self.badgeCount = badgeCount
+    }
+    
+    // the default tagID is title, can be overridden. by choosing appropriate init.
+    public init(title: String, systemName: String = "", badgeCount: Int? = nil) {
+        self.tagID = title
         self.resourceName = systemName
         self.title = title
         self.image = Image(systemName: systemName)

@@ -89,11 +89,12 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
     struct PreviewView: View {
         @State var selection = "Home"
         
+        // the default tagID is title, can be overridden. by choosing appropriate init.
         @State private var tabs: [ChockBarItem] = [
-            ChockBarItem(tagID: "Home", title: "Home", systemName: "heart.fill", badgeCount: 2),
-            ChockBarItem(tagID: "Browse", title: "Browse", systemName: "magnifyingglass"),
-            ChockBarItem(tagID: "Discover", title: "Discover", systemName: "globe", badgeCount: 100),
-            ChockBarItem(tagID: "Profile", title: "Profile", systemName: "person.fill")
+            ChockBarItem(title: "Home", systemName: "heart.fill", badgeCount: 2),
+            ChockBarItem(title: "Browse", systemName: "magnifyingglass"),
+            ChockBarItem(title: "Discover", systemName: "globe", badgeCount: 100),
+            ChockBarItem(title: "Profile", systemName: "person.fill")
         ]
         
         var body: some View {
