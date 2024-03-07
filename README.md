@@ -7,7 +7,7 @@ A library of reusable SwiftUI components that are missing from the SwiftUI frame
 - See the [Wiki](https://github.com/SwiftfulThinking/SwiftfulUI/wiki) for full documentation.
 - See the SwiftUI Previews within source files for example implementations.
 
-### New (0.1.6.)
+### New (0.1.7.)
 - ChockKit TabView offers unparalleled customization, allowing you to shape your tab bar's aesthetics precisely to your liking. Whether you prefer a minimalist approach or a burst of colors, CustomTabView empowers you to craft a tab bar that seamlessly aligns with your app's visual identity, effortlessly.
 
 - Experience the seamless integration of ChockKit with SwiftUI's view lifecycle updates. By seamlessly incorporating methods such as `onAppear(perform:)`, `onDisappear(perform:)`, and `task(priority:_:)`, ChockKit ensures that every tab switch triggers these lifecycle events, enriching your app's responsiveness and functionality.
@@ -52,13 +52,13 @@ ChocKit is available under the MIT license. See the LICENSE file for more info.
 ChocKit is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ChocKit', '~> 0.1.6'
+pod 'ChocKit', '~> 0.1.7'
 ```
 ChocKit is also available as a Swift Package. You can add it to your Xcode project by following these steps:
 
 1. Navigate to `File` > `Swift Packages` > `Add Package Dependency` in Xcode.
 2. Enter the repository URL: https://github.com/Aelx-Vaiman/ChocKit.git .
-3. When prompted for the package version, use 0.1.6.
+3. When prompted for the package version, use 0.1.7.
 
 
 
