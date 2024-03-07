@@ -18,7 +18,7 @@ public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
         case zStack
     }
     
-    @Binding private var selection: ChockBarItem
+    @Binding private var selection: String
     @State private var isKeyboardVisible = false
     
     private let style: DisplayStyle
@@ -26,7 +26,7 @@ public struct ChockTabView<Content:View, TabBar: View>: View, KeyboardReadable {
     private let screenViews: Content
     
     public init(
-        selection: Binding<ChockBarItem>,
+        selection: Binding<String>,
         style: DisplayStyle = .vStack,
         @ViewBuilder content: @escaping () -> Content,
         @ViewBuilder tabBar: () -> TabBar) {
@@ -76,8 +76,8 @@ extension ChockTabView {
     private func getCurrentScreen<Screens: View>(content: Screens) -> some View {
         content.variadic { children in
             children.first { child in
-                let tag: ChockBarItem? = child[ChockTag.self].flatMap { $0 as? ChockBarItem }
-                return tag?.isSame(other: selection) ?? false
+                let tag: String? = child[ChockTag.self].flatMap { $0 as? String }
+                return tag == selection
             }
         }
     }
@@ -85,13 +85,15 @@ extension ChockTabView {
 
 struct TabBarViewBuilder_Previews: PreviewProvider {
     
+
     struct PreviewView: View {
-        @State var selection: ChockBarItem = ChockBarItem(title: "Home", systemName: "heart.fill")
+        @State var selection = "Home"
+        
         @State private var tabs: [ChockBarItem] = [
-            ChockBarItem(title: "Home", systemName: "heart.fill", badgeCount: 2),
-            ChockBarItem(title: "Browse", systemName: "magnifyingglass"),
-            ChockBarItem(title: "Discover", systemName: "globe", badgeCount: 100),
-            ChockBarItem(title: "Profile", systemName: "person.fill")
+            ChockBarItem(tagID: "Home", title: "Home", systemName: "heart.fill", badgeCount: 2),
+            ChockBarItem(tagID: "Browse", title: "Browse", systemName: "magnifyingglass"),
+            ChockBarItem(tagID: "Discover", title: "Discover", systemName: "globe", badgeCount: 100),
+            ChockBarItem(tagID: "Profile", title: "Profile", systemName: "person.fill")
         ]
         
         var body: some View {
@@ -101,7 +103,7 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.blue)
                         .edgesIgnoringSafeArea(.all)
-                        .chockBarItem(tabs[0])
+                        .chockBarItem(tabs[0].tagID)
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                                 tabs[0].updateBadgeCount(to: (tabs[0].currentBadgeCount ?? 0) + 1)
@@ -114,17 +116,17 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.red)
                         .edgesIgnoringSafeArea(.all)
-                        .chockBarItem(tabs[1])
+                        .chockBarItem(tabs[1].tagID)
                     
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.orange)
                         .edgesIgnoringSafeArea(.all)
-                        .chockBarItem(tabs[2])
+                        .chockBarItem(tabs[2].tagID)
                     
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.green)
                         .edgesIgnoringSafeArea(.all)
-                        .chockBarItem(tabs[3])
+                        .chockBarItem(tabs[3].tagID)
                     
                 } tabBar: {
                     ChockBarDefaultView(
@@ -150,3 +152,5 @@ struct TabBarViewBuilder_Previews: PreviewProvider {
         PreviewView()
     }
 }
+
+
