@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ChockTag: ViewTraitKey {
-    static var defaultValue: AnyHashable? = Optional<ChockBarItem>.none
+    static var defaultValue: AnyHashable? = Optional<String>.none
 }
 
 public extension View {

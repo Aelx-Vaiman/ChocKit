@@ -43,7 +43,7 @@ import SwiftUI
 public struct ChockBarDefaultView: View {
     
     private let tabs: [ChockBarItem]
-    @Binding private var selection: ChockBarItem
+    @Binding private var selection: String
     private let accentColor: Color
     private let defaultColor: Color
     private let backgroundColor: Color?
@@ -57,7 +57,7 @@ public struct ChockBarDefaultView: View {
     
     public init(
         tabs: [ChockBarItem],
-        selection: Binding<ChockBarItem>,
+        selection: Binding<String>,
         accentColor: Color = .blue,
         defaultColor: Color = .gray,
         backgroundColor: Color? = nil,
@@ -111,7 +111,7 @@ public struct ChockBarDefaultView: View {
     }
 
     private func switchToTab(tab: ChockBarItem) {
-        selection = tab
+        selection = tab.tagID
     }
     
 }
@@ -128,7 +128,7 @@ private extension ChockBarDefaultView {
             Text(tab.title)
         }
         .font(font)
-        .foregroundColor(selection.isSame(other: tab)  ? accentColor : defaultColor)
+        .foregroundColor(selection == tab.tagID  ? accentColor : defaultColor)
         .frame(maxWidth: .infinity)
         .padding(.vertical, insetPadding)
         .overlay(

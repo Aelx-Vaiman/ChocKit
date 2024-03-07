@@ -18,6 +18,7 @@
 		216E29A82B987CFA00118E28 /* ChockTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A42B987CFA00118E28 /* ChockTabView.swift */; };
 		216E29A92B987CFA00118E28 /* ChockTagModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A52B987CFA00118E28 /* ChockTagModifier.swift */; };
 		216E29AA2B987CFA00118E28 /* ChockBarDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */; };
+		218BCB392B99314C00D3B1F0 /* ChockTabProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BCB382B99314C00D3B1F0 /* ChockTabProtocol.swift */; };
 		21F7C0A12B92020900DAAE2A /* HapticOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06A2B92020900DAAE2A /* HapticOption.swift */; };
 		21F7C0A22B92020900DAAE2A /* HapticViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */; };
 		21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06C2B92020900DAAE2A /* Haptics.swift */; };
@@ -98,6 +99,7 @@
 		216E29A42B987CFA00118E28 /* ChockTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTabView.swift; sourceTree = "<group>"; };
 		216E29A52B987CFA00118E28 /* ChockTagModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTagModifier.swift; sourceTree = "<group>"; };
 		216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarDefaultView.swift; sourceTree = "<group>"; };
+		218BCB382B99314C00D3B1F0 /* ChockTabProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChockTabProtocol.swift; sourceTree = "<group>"; };
 		21AB03E018B4ECF5AB9473F560001F8C /* ChocKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChocKit.release.xcconfig; sourceTree = "<group>"; };
 		21F7C06A2B92020900DAAE2A /* HapticOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticOption.swift; sourceTree = "<group>"; };
 		21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticViewModifier.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				216E29A32B987CFA00118E28 /* ChockBarItem.swift */,
 				216E29A42B987CFA00118E28 /* ChockTabView.swift */,
 				216E29A52B987CFA00118E28 /* ChockTagModifier.swift */,
+				218BCB382B99314C00D3B1F0 /* ChockTabProtocol.swift */,
 			);
 			path = TabBars;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				21F7C0BF2B92020900DAAE2A /* FontRegularViewModifier.swift in Sources */,
 				211A5AFD2B923A3B00A9BF22 /* UIApplication.swift in Sources */,
 				21F7C0B12B92020900DAAE2A /* BackgroundBorderAndLinearGradientFillViewModifier.swift in Sources */,
+				218BCB392B99314C00D3B1F0 /* ChockTabProtocol.swift in Sources */,
 				99A8674E53067D20744C59E78D92B9E5 /* ChocKit-dummy.m in Sources */,
 				21F7C0B52B92020900DAAE2A /* CustomToggle.swift in Sources */,
 				21F7C0C72B92020900DAAE2A /* AnyNotificationListenerViewModifier.swift in Sources */,
