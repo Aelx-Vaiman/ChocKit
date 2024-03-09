@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-public struct ChockBarItem: ChockTabProtocol, Hashable {
-    public let tagID: String
+public struct DefaultBarItem:  Hashable {
     public let title: String
     public let image: Image
     
@@ -23,34 +22,15 @@ public struct ChockBarItem: ChockTabProtocol, Hashable {
     
     // tagID must be unique string, each tub must have different
     //*** important!! same!! tag should be given to the screen witch belongs to the tab, doing so by calling .chockBarItem(tagID)
-    public init(tagID: String, title: String, resource: String, badgeCount: Int? = nil) {
-        self.tagID = tagID
-        self.resourceName = resource
-        self.title = title
-        self.image = Image(resource)
-        self.badgeCount = badgeCount
-    }
-    
-    // the default tagID is title, can be overridden. by choosing appropriate init.
     public init(title: String, resource: String, badgeCount: Int? = nil) {
-        self.tagID = title
         self.resourceName = resource
         self.title = title
         self.image = Image(resource)
         self.badgeCount = badgeCount
     }
+
     
-    public init(tagID: String, title: String, systemName: String = "", badgeCount: Int? = nil) {
-        self.tagID = tagID
-        self.resourceName = systemName
-        self.title = title
-        self.image = Image(systemName: systemName)
-        self.badgeCount = badgeCount
-    }
-    
-    // the default tagID is title, can be overridden. by choosing appropriate init.
     public init(title: String, systemName: String = "", badgeCount: Int? = nil) {
-        self.tagID = title
         self.resourceName = systemName
         self.title = title
         self.image = Image(systemName: systemName)
@@ -64,6 +44,6 @@ public struct ChockBarItem: ChockTabProtocol, Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(title)
         hasher.combine(resourceName)
-        hasher.combine(badgeCount)
+      //  hasher.combine(badgeCount)
     }
 }

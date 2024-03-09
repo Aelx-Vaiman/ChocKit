@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		03517A784A59AAE65D5A2CD373F30356 /* Pods-ChocKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 059F151C6DCE1F00B0050D32E778FA1A /* Pods-ChocKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		210603442B9D025D0091EF73 /* DefaultBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106032C2B9D025D0091EF73 /* DefaultBarItem.swift */; };
+		210603452B9D025D0091EF73 /* DefaultBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106032D2B9D025D0091EF73 /* DefaultBarView.swift */; };
+		210603462B9D025D0091EF73 /* BottomFloatingTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106032F2B9D025D0091EF73 /* BottomFloatingTabBarView.swift */; };
+		210603472B9D025D0091EF73 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603302B9D025D0091EF73 /* ExampleView.swift */; };
+		210603482B9D025D0091EF73 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603312B9D025D0091EF73 /* Tab.swift */; };
+		210603492B9D025D0091EF73 /* TopIndicatorTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603322B9D025D0091EF73 /* TopIndicatorTabBarView.swift */; };
+		2106034A2B9D025D0091EF73 /* ColorfulTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603342B9D025D0091EF73 /* ColorfulTabBar.swift */; };
+		2106034B2B9D025D0091EF73 /* ColorfulTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603352B9D025D0091EF73 /* ColorfulTabBarItem.swift */; };
+		2106034C2B9D025D0091EF73 /* ColorfulTabBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603362B9D025D0091EF73 /* ColorfulTabBarsView.swift */; };
+		2106034D2B9D025D0091EF73 /* DefaultTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603382B9D025D0091EF73 /* DefaultTabBar.swift */; };
+		2106034E2B9D025D0091EF73 /* UITabBarControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106033B2B9D025D0091EF73 /* UITabBarControllerRepresentable.swift */; };
+		2106034F2B9D025D0091EF73 /* NSTabBarControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106033D2B9D025D0091EF73 /* NSTabBarControllerRepresentable.swift */; };
+		210603502B9D025D0091EF73 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106033F2B9D025D0091EF73 /* CustomTabView.swift */; };
+		210603512B9D025D0091EF73 /* EnvironmentValues+TabBarPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603402B9D025D0091EF73 /* EnvironmentValues+TabBarPosition.swift */; };
+		210603532B9D025D0091EF73 /* TabsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210603432B9D025D0091EF73 /* TabsExample.swift */; };
 		211A5AF22B92323000A9BF22 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AEE2B92323000A9BF22 /* ErrorView.swift */; };
 		211A5AF32B92323000A9BF22 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AEF2B92323000A9BF22 /* SearchBarView.swift */; };
 		211A5AFD2B923A3B00A9BF22 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */; };
 		216E29052B9342A700118E28 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29042B9342A700118E28 /* Global.swift */; };
 		216E29722B974E6500118E28 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29712B974E6500118E28 /* KeyboardReadable.swift */; };
 		216E29A22B987C8400118E28 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A12B987C8400118E28 /* View.swift */; };
-		216E29A72B987CFA00118E28 /* ChockBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A32B987CFA00118E28 /* ChockBarItem.swift */; };
-		216E29A82B987CFA00118E28 /* ChockTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A42B987CFA00118E28 /* ChockTabView.swift */; };
-		216E29A92B987CFA00118E28 /* ChockTagModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A52B987CFA00118E28 /* ChockTagModifier.swift */; };
-		216E29AA2B987CFA00118E28 /* ChockBarDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */; };
-		218BCB392B99314C00D3B1F0 /* ChockTabProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BCB382B99314C00D3B1F0 /* ChockTabProtocol.swift */; };
 		21F7C0A12B92020900DAAE2A /* HapticOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06A2B92020900DAAE2A /* HapticOption.swift */; };
 		21F7C0A22B92020900DAAE2A /* HapticViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */; };
 		21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7C06C2B92020900DAAE2A /* Haptics.swift */; };
@@ -89,17 +99,27 @@
 		17FFC50E239AB8DF4CB3375C0F07F6F6 /* ChocKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChocKit-umbrella.h"; sourceTree = "<group>"; };
 		20B1B9D5A84DB1C8E452107A96A02EA7 /* Pods-ChocKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChocKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		20FB91335E66D91F66DF12DE2265730B /* Pods-ChocKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChocKit_Example.modulemap"; sourceTree = "<group>"; };
+		2106032C2B9D025D0091EF73 /* DefaultBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBarItem.swift; sourceTree = "<group>"; };
+		2106032D2B9D025D0091EF73 /* DefaultBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBarView.swift; sourceTree = "<group>"; };
+		2106032F2B9D025D0091EF73 /* BottomFloatingTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomFloatingTabBarView.swift; sourceTree = "<group>"; };
+		210603302B9D025D0091EF73 /* ExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		210603312B9D025D0091EF73 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		210603322B9D025D0091EF73 /* TopIndicatorTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopIndicatorTabBarView.swift; sourceTree = "<group>"; };
+		210603342B9D025D0091EF73 /* ColorfulTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorfulTabBar.swift; sourceTree = "<group>"; };
+		210603352B9D025D0091EF73 /* ColorfulTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorfulTabBarItem.swift; sourceTree = "<group>"; };
+		210603362B9D025D0091EF73 /* ColorfulTabBarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorfulTabBarsView.swift; sourceTree = "<group>"; };
+		210603382B9D025D0091EF73 /* DefaultTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTabBar.swift; sourceTree = "<group>"; };
+		2106033B2B9D025D0091EF73 /* UITabBarControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerRepresentable.swift; sourceTree = "<group>"; };
+		2106033D2B9D025D0091EF73 /* NSTabBarControllerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTabBarControllerRepresentable.swift; sourceTree = "<group>"; };
+		2106033F2B9D025D0091EF73 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		210603402B9D025D0091EF73 /* EnvironmentValues+TabBarPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+TabBarPosition.swift"; sourceTree = "<group>"; };
+		210603432B9D025D0091EF73 /* TabsExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsExample.swift; sourceTree = "<group>"; };
 		211A5AEE2B92323000A9BF22 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		211A5AEF2B92323000A9BF22 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		211A5AFB2B923A3B00A9BF22 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		216E29042B9342A700118E28 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		216E29712B974E6500118E28 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		216E29A12B987C8400118E28 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		216E29A32B987CFA00118E28 /* ChockBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarItem.swift; sourceTree = "<group>"; };
-		216E29A42B987CFA00118E28 /* ChockTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTabView.swift; sourceTree = "<group>"; };
-		216E29A52B987CFA00118E28 /* ChockTagModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockTagModifier.swift; sourceTree = "<group>"; };
-		216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChockBarDefaultView.swift; sourceTree = "<group>"; };
-		218BCB382B99314C00D3B1F0 /* ChockTabProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChockTabProtocol.swift; sourceTree = "<group>"; };
 		21AB03E018B4ECF5AB9473F560001F8C /* ChocKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChocKit.release.xcconfig; sourceTree = "<group>"; };
 		21F7C06A2B92020900DAAE2A /* HapticOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticOption.swift; sourceTree = "<group>"; };
 		21F7C06B2B92020900DAAE2A /* HapticViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticViewModifier.swift; sourceTree = "<group>"; };
@@ -196,6 +216,83 @@
 				9042FC34568C7DDC849B86673B8AC25C /* ChocKit */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2106032E2B9D025D0091EF73 /* DefaultSkin */ = {
+			isa = PBXGroup;
+			children = (
+				2106032C2B9D025D0091EF73 /* DefaultBarItem.swift */,
+				2106032D2B9D025D0091EF73 /* DefaultBarView.swift */,
+			);
+			path = DefaultSkin;
+			sourceTree = "<group>";
+		};
+		210603332B9D025D0091EF73 /* Example1 */ = {
+			isa = PBXGroup;
+			children = (
+				2106032F2B9D025D0091EF73 /* BottomFloatingTabBarView.swift */,
+				210603302B9D025D0091EF73 /* ExampleView.swift */,
+				210603312B9D025D0091EF73 /* Tab.swift */,
+				210603322B9D025D0091EF73 /* TopIndicatorTabBarView.swift */,
+			);
+			path = Example1;
+			sourceTree = "<group>";
+		};
+		210603372B9D025D0091EF73 /* Example2 */ = {
+			isa = PBXGroup;
+			children = (
+				210603342B9D025D0091EF73 /* ColorfulTabBar.swift */,
+				210603352B9D025D0091EF73 /* ColorfulTabBarItem.swift */,
+				210603362B9D025D0091EF73 /* ColorfulTabBarsView.swift */,
+			);
+			path = Example2;
+			sourceTree = "<group>";
+		};
+		210603392B9D025D0091EF73 /* exampleDefultBar */ = {
+			isa = PBXGroup;
+			children = (
+				210603382B9D025D0091EF73 /* DefaultTabBar.swift */,
+			);
+			path = exampleDefultBar;
+			sourceTree = "<group>";
+		};
+		2106033A2B9D025D0091EF73 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				210603332B9D025D0091EF73 /* Example1 */,
+				210603372B9D025D0091EF73 /* Example2 */,
+				210603392B9D025D0091EF73 /* exampleDefultBar */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		2106033C2B9D025D0091EF73 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2106033B2B9D025D0091EF73 /* UITabBarControllerRepresentable.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		2106033E2B9D025D0091EF73 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2106033D2B9D025D0091EF73 /* NSTabBarControllerRepresentable.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		210603422B9D025D0091EF73 /* CustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				2106032E2B9D025D0091EF73 /* DefaultSkin */,
+				2106033A2B9D025D0091EF73 /* Examples */,
+				2106033C2B9D025D0091EF73 /* iOS */,
+				2106033E2B9D025D0091EF73 /* macOS */,
+				2106033F2B9D025D0091EF73 /* CustomTabView.swift */,
+				210603402B9D025D0091EF73 /* EnvironmentValues+TabBarPosition.swift */,
+			);
+			path = CustomTabView;
 			sourceTree = "<group>";
 		};
 		211A5AF92B923A2200A9BF22 /* Extentions */ = {
@@ -371,11 +468,8 @@
 		21F7C08E2B92020900DAAE2A /* TabBars */ = {
 			isa = PBXGroup;
 			children = (
-				216E29A62B987CFA00118E28 /* ChockBarDefaultView.swift */,
-				216E29A32B987CFA00118E28 /* ChockBarItem.swift */,
-				216E29A42B987CFA00118E28 /* ChockTabView.swift */,
-				216E29A52B987CFA00118E28 /* ChockTagModifier.swift */,
-				218BCB382B99314C00D3B1F0 /* ChockTabProtocol.swift */,
+				210603422B9D025D0091EF73 /* CustomTabView */,
+				210603432B9D025D0091EF73 /* TabsExample.swift */,
 			);
 			path = TabBars;
 			sourceTree = "<group>";
@@ -629,7 +723,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					73309EC29BF8C1D1F5FDEE1D5D03ADCB = {
 						LastSwiftMigration = "";
@@ -695,43 +789,52 @@
 			files = (
 				21F7C0A82B92020900DAAE2A /* ScrollViewWithOnScrollChanged.swift in Sources */,
 				21F7C0AB2B92020900DAAE2A /* AsyncLetViewBuilder.swift in Sources */,
+				2106034E2B9D025D0091EF73 /* UITabBarControllerRepresentable.swift in Sources */,
 				21F7C0A72B92020900DAAE2A /* ScrollViewWithScrollToLocation.swift in Sources */,
-				216E29A82B987CFA00118E28 /* ChockTabView.swift in Sources */,
 				21F7C0B42B92020900DAAE2A /* BackgroundBorderViewModifier.swift in Sources */,
+				210603452B9D025D0091EF73 /* DefaultBarView.swift in Sources */,
 				21F7C0C32B92020900DAAE2A /* CountdownViewBuilder.swift in Sources */,
+				210603502B9D025D0091EF73 /* CustomTabView.swift in Sources */,
+				2106034B2B9D025D0091EF73 /* ColorfulTabBarItem.swift in Sources */,
 				21F7C0C42B92020900DAAE2A /* OnFirstDisappearViewModifier.swift in Sources */,
+				2106034C2B9D025D0091EF73 /* ColorfulTabBarsView.swift in Sources */,
 				21F7C0C22B92020900DAAE2A /* RootView.swift in Sources */,
 				21F7C0AE2B92020900DAAE2A /* NonLazyHGrid.swift in Sources */,
+				210603472B9D025D0091EF73 /* ExampleView.swift in Sources */,
 				21F7C0AF2B92020900DAAE2A /* NonLazyVGrid.swift in Sources */,
 				216E29052B9342A700118E28 /* Global.swift in Sources */,
 				21F7C0AD2B92020900DAAE2A /* AsyncViewBuilder.swift in Sources */,
 				211A5AF32B92323000A9BF22 /* SearchBarView.swift in Sources */,
-				216E29A72B987CFA00118E28 /* ChockBarItem.swift in Sources */,
+				210603512B9D025D0091EF73 /* EnvironmentValues+TabBarPosition.swift in Sources */,
 				21F7C0A32B92020900DAAE2A /* Haptics.swift in Sources */,
-				216E29AA2B987CFA00118E28 /* ChockBarDefaultView.swift in Sources */,
+				210603462B9D025D0091EF73 /* BottomFloatingTabBarView.swift in Sources */,
 				21F7C0A52B92020900DAAE2A /* AnyRecursiveModel.swift in Sources */,
 				21F7C0B02B92020900DAAE2A /* BackgroundBorderAndFillViewModifier.swift in Sources */,
 				21F7C0C62B92020900DAAE2A /* StretchyHeaderViewModifier.swift in Sources */,
+				2106034A2B9D025D0091EF73 /* ColorfulTabBar.swift in Sources */,
 				21F7C0BF2B92020900DAAE2A /* FontRegularViewModifier.swift in Sources */,
 				211A5AFD2B923A3B00A9BF22 /* UIApplication.swift in Sources */,
 				21F7C0B12B92020900DAAE2A /* BackgroundBorderAndLinearGradientFillViewModifier.swift in Sources */,
-				218BCB392B99314C00D3B1F0 /* ChockTabProtocol.swift in Sources */,
 				99A8674E53067D20744C59E78D92B9E5 /* ChocKit-dummy.m in Sources */,
 				21F7C0B52B92020900DAAE2A /* CustomToggle.swift in Sources */,
 				21F7C0C72B92020900DAAE2A /* AnyNotificationListenerViewModifier.swift in Sources */,
 				21F7C0AA2B92020900DAAE2A /* FrameReader.swift in Sources */,
 				21F7C0C02B92020900DAAE2A /* FontAnimatableViewModifier.swift in Sources */,
+				210603532B9D025D0091EF73 /* TabsExample.swift in Sources */,
 				211A5AF22B92323000A9BF22 /* ErrorView.swift in Sources */,
 				21F7C0B32B92020900DAAE2A /* BackgroundFillViewModifier.swift in Sources */,
 				21F7C0B72B92020900DAAE2A /* DragGestureViewModifier.swift in Sources */,
 				21F7C0B62B92020900DAAE2A /* RotationGestureViewModifier.swift in Sources */,
 				21F7C0C52B92020900DAAE2A /* OnFirstAppearViewModifier.swift in Sources */,
+				2106034D2B9D025D0091EF73 /* DefaultTabBar.swift in Sources */,
 				21F7C0A22B92020900DAAE2A /* HapticViewModifier.swift in Sources */,
 				216E29A22B987C8400118E28 /* View.swift in Sources */,
 				216E29722B974E6500118E28 /* KeyboardReadable.swift in Sources */,
 				21F7C0A12B92020900DAAE2A /* HapticOption.swift in Sources */,
-				216E29A92B987CFA00118E28 /* ChockTagModifier.swift in Sources */,
+				2106034F2B9D025D0091EF73 /* NSTabBarControllerRepresentable.swift in Sources */,
 				21F7C0A92B92020900DAAE2A /* LocationReader.swift in Sources */,
+				210603482B9D025D0091EF73 /* Tab.swift in Sources */,
+				210603442B9D025D0091EF73 /* DefaultBarItem.swift in Sources */,
 				21F7C0BE2B92020900DAAE2A /* CustomProgressBar.swift in Sources */,
 				21F7C0A62B92020900DAAE2A /* ButtonStyleViewModifier.swift in Sources */,
 				21F7C0C12B92020900DAAE2A /* FlipView.swift in Sources */,
@@ -739,6 +842,7 @@
 				21F7C0A42B92020900DAAE2A /* AnyRecursiveView.swift in Sources */,
 				21F7C0B92B92020900DAAE2A /* RedactedViewModifier.swift in Sources */,
 				21F7C0AC2B92020900DAAE2A /* AsyncButton.swift in Sources */,
+				210603492B9D025D0091EF73 /* TopIndicatorTabBarView.swift in Sources */,
 				21F7C0B82B92020900DAAE2A /* MagnificationGestureViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -886,6 +990,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1067,6 +1172,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

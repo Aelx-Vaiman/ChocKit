@@ -12,7 +12,7 @@ import SwiftUI
 ///
 ///  ```swift
 ///  // 'Default' style
-///  ChockBarDefaultView(
+///  BarDefaultView(
 ///     tabs: tabs,
 ///     selection: $selection,
 ///     accentColor: .blue,
@@ -26,7 +26,7 @@ import SwiftUI
 ///     shadow: ChockShadow() 
 ///
 ///  // 'Floating' style
-///  ChockBarDefaultView(
+///  BarDefaultView(
 ///     tabs: tabs,
 ///     selection: $selection,
 ///     accentColor: .blue,
@@ -40,10 +40,10 @@ import SwiftUI
 ///     cornerRadius: 30,
 ///     shadow: ChockShadow(radius: 8, y:  -5)
 ///  ```
-public struct ChockBarDefaultView: View {
+public struct DefaultBarView: View {
     
-    private let tabs: [ChockBarItem]
-    @Binding private var selection: String
+    private let tabs: [DefaultBarItem]
+    @Binding private var selection: DefaultBarItem
     private let accentColor: Color
     private let defaultColor: Color
     private let backgroundColor: Color?
@@ -56,8 +56,8 @@ public struct ChockBarDefaultView: View {
     private let shadow: ChockShadow
     
     public init(
-        tabs: [ChockBarItem],
-        selection: Binding<String>,
+        tabs: [DefaultBarItem],
+        selection: Binding<DefaultBarItem>,
         accentColor: Color = .blue,
         defaultColor: Color = .gray,
         backgroundColor: Color? = nil,
@@ -110,15 +110,15 @@ public struct ChockBarDefaultView: View {
         .padding(outerPadding)
     }
 
-    private func switchToTab(tab: ChockBarItem) {
-        selection = tab.tagID
+    private func switchToTab(tab: DefaultBarItem) {
+        selection = tab
     }
     
 }
 
-private extension ChockBarDefaultView {
+private extension DefaultBarView {
     
-    private func tabView(_ tab: ChockBarItem) -> some View {
+    private func tabView(_ tab: DefaultBarItem) -> some View {
         VStack(spacing: spacing) {
             tab.image
                 .resizable()
@@ -128,7 +128,7 @@ private extension ChockBarDefaultView {
             Text(tab.title)
         }
         .font(font)
-        .foregroundColor(selection == tab.tagID  ? accentColor : defaultColor)
+        .foregroundColor(selection.hashValue == tab.hashValue  ? accentColor : defaultColor)
         .frame(maxWidth: .infinity)
         .padding(.vertical, insetPadding)
         .overlay(
@@ -150,6 +150,6 @@ private extension ChockBarDefaultView {
 
 struct TabBarDefaultView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarViewBuilder_Previews.previews
+        DefaultTabBar()
     }
 }
