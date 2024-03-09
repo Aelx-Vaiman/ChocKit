@@ -259,6 +259,7 @@
 		2106033A2B9D025D0091EF73 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				210603432B9D025D0091EF73 /* TabsExample.swift */,
 				210603332B9D025D0091EF73 /* Example1 */,
 				210603372B9D025D0091EF73 /* Example2 */,
 				210603392B9D025D0091EF73 /* exampleDefultBar */,
@@ -469,7 +470,6 @@
 			isa = PBXGroup;
 			children = (
 				210603422B9D025D0091EF73 /* CustomTabView */,
-				210603432B9D025D0091EF73 /* TabsExample.swift */,
 			);
 			path = TabBars;
 			sourceTree = "<group>";

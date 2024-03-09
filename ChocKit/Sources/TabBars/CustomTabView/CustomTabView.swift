@@ -94,9 +94,9 @@ private struct _CustomTabViewLayout<TabBarView: View, SelectionValue: Hashable>:
     private func topBarView(children: _VariadicView.Children) -> some View {
         VStack(spacing: 0) {
             tabBarView
-                .ignoresSafeArea(.container)
             
             contentView(children: children)
+                .ignoresSafeArea(.container)
         }
     }
     
