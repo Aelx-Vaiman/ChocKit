@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Color {
+public extension Color {
     func blendedWithWhiteOpacity(_ opacity: Double) -> Color {
         let opacity = 1 - opacity
         // Extracting color components
