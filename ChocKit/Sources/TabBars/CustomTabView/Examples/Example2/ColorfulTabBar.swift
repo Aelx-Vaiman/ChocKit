@@ -33,7 +33,7 @@ struct ColorfulTabBar: View {
                 }
             }
             
-            NavigationView {
+
                 ZStack {
                     Color.orange.ignoresSafeArea()
                     VStack {
@@ -41,7 +41,6 @@ struct ColorfulTabBar: View {
                             .navigationBarTitle("Massages")
                     }
                 }
-            }
             
         }
     }
@@ -52,7 +51,7 @@ struct ColorfulTabBar: View {
 struct FirstScreen: View {
     var body: some View {
         ZStack {
-            Color.red.background(ignoresSafeAreaEdges: .top)
+            Color.red
             VStack {
                 NavigationLink(destination: NextScreen()) {
                     Text("Button")

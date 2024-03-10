@@ -18,12 +18,12 @@ import SwiftUI
 ///     accentColor: .blue,
 ///     defaultColor: .gray,
 ///     backgroundColor: .white,
-///     font: .caption,
+///     font: .subheadline,
 ///     iconSize: 20,
 ///     spacing: 6,
-///     insetPadding: 10,
-///     outerPadding: 0,
-///     shadow: ChockShadow() 
+///     insetPadding: 16,
+///     outerPadding: 0
+///     )
 ///
 ///  // 'Floating' style
 ///  BarDefaultView(
@@ -32,14 +32,16 @@ import SwiftUI
 ///     accentColor: .blue,
 ///     defaultColor: .gray,
 ///     backgroundColor: .white,
-///     font: .caption,
+///     font: .subheadline,
 ///     iconSize: 20,
 ///     spacing: 6,
 ///     insetPadding: 12,
 ///     outerPadding: 12,
 ///     cornerRadius: 30,
 ///     shadow: ChockShadow(radius: 8, y:  -5)
+///     )
 ///  ```
+
 public struct DefaultBarView: View {
     
     private let tabs: [DefaultBarItem]
@@ -54,6 +56,10 @@ public struct DefaultBarView: View {
     private let outerPadding: CGFloat
     private let cornerRadius: CGFloat
     private let shadow: ChockShadow
+    
+    var outerBackgroundColor: Color {
+        backgroundColor ?? .clear
+    }
     
     public init(
         tabs: [DefaultBarItem],
@@ -108,6 +114,9 @@ public struct DefaultBarView: View {
             }
         )
         .padding(outerPadding)
+        .background(
+            outerBackgroundColor
+        )
     }
 
     private func switchToTab(tab: DefaultBarItem) {
