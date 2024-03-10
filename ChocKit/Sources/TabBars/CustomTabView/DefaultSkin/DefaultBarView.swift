@@ -67,10 +67,10 @@ public struct DefaultBarView: View {
         accentColor: Color = .blue,
         defaultColor: Color = .gray,
         backgroundColor: Color? = nil,
-        font: Font = .caption,
+        font: Font = .subheadline,
         iconSize: CGFloat = 20,
-        spacing: CGFloat = 4,
-        insetPadding: CGFloat = 10,
+        spacing: CGFloat = 6,
+        insetPadding: CGFloat = 16,
         outerPadding: CGFloat = 0,
         cornerRadius: CGFloat = 0,
         shadow: ChockShadow = ChockShadow(radius: 0)
