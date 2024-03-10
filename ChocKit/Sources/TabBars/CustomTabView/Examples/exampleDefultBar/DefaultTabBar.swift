@@ -119,7 +119,6 @@ struct DefaultTabBar: View {
             }
     
         }
-        .background(Color.indigo)
     }
 }
 

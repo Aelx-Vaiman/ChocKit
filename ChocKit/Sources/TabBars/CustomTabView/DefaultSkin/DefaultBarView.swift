@@ -57,6 +57,10 @@ public struct DefaultBarView: View {
     private let cornerRadius: CGFloat
     private let shadow: ChockShadow
     
+    var outerBackgroundColor: Color {
+        backgroundColor ?? .clear
+    }
+    
     public init(
         tabs: [DefaultBarItem],
         selection: Binding<DefaultBarItem>,
@@ -110,6 +114,9 @@ public struct DefaultBarView: View {
             }
         )
         .padding(outerPadding)
+        .background(
+            outerBackgroundColor
+        )
     }
 
     private func switchToTab(tab: DefaultBarItem) {
