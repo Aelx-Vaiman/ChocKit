@@ -21,9 +21,9 @@ import SwiftUI
 ///     font: .caption,
 ///     iconSize: 20,
 ///     spacing: 6,
-///     insetPadding: 10,
-///     outerPadding: 0,
-///     shadow: ChockShadow() 
+///     insetPadding: 16,
+///     outerPadding: 0
+///     )
 ///
 ///  // 'Floating' style
 ///  BarDefaultView(
@@ -39,7 +39,9 @@ import SwiftUI
 ///     outerPadding: 12,
 ///     cornerRadius: 30,
 ///     shadow: ChockShadow(radius: 8, y:  -5)
+///     )
 ///  ```
+
 public struct DefaultBarView: View {
     
     private let tabs: [DefaultBarItem]

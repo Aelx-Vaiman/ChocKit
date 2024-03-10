@@ -8,7 +8,39 @@
 import Foundation
 import SwiftUI
 
-
+/// Customizable TabBar
+///
+///  ```swift
+///  // 'Default' style
+///  BarDefaultView(
+///     tabs: tabs,
+///     selection: $selection,
+///     accentColor: .blue,
+///     defaultColor: .gray,
+///     backgroundColor: .white,
+///     font: .caption,
+///     iconSize: 20,
+///     spacing: 6,
+///     insetPadding: 16,
+///     outerPadding: 0
+///     )
+///
+///  // 'Floating' style
+///  BarDefaultView(
+///     tabs: tabs,
+///     selection: $selection,
+///     accentColor: .blue,
+///     defaultColor: .gray,
+///     backgroundColor: .white,
+///     font: .caption,
+///     iconSize: 20,
+///     spacing: 6,
+///     insetPadding: 12,
+///     outerPadding: 12,
+///     cornerRadius: 30,
+///     shadow: ChockShadow(radius: 8, y:  -5) 
+///     )
+///  ```
 
 struct DefaultTabBar: View {
     
@@ -87,7 +119,7 @@ struct DefaultTabBar: View {
             }
     
         }
-        .background(Color.indigo.opacity(0.5))
+        .background(Color.indigo)
     }
 }
 
