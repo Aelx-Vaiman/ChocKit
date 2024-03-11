@@ -10,12 +10,12 @@ import UIKit
 
 /// Publisher to read keyboard changes
 @available(iOS 13.0, *)
-protocol KeyboardReadable {
+public protocol KeyboardReadable {
     var keyboardPublisher: AnyPublisher<Bool, Never> { get }
 }
 
 @available(iOS 13.0, *)
-extension KeyboardReadable {
+public extension KeyboardReadable {
     var keyboardPublisher: AnyPublisher<Bool, Never> {
         Publishers.Merge(
             NotificationCenter.default

@@ -310,7 +310,6 @@
 		216E28FE2B9282E200118E28 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				216E29702B974E5600118E28 /* Keyboard */,
 				211A5AF92B923A2200A9BF22 /* Extentions */,
 			);
 			path = Internal;
@@ -319,18 +318,11 @@
 		216E29032B93428D00118E28 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				216E29712B974E6500118E28 /* KeyboardReadable.swift */,
 				216E29042B9342A700118E28 /* Global.swift */,
 				217FC49C2B9E125300B3AF8D /* Color.swift */,
 			);
 			path = Global;
-			sourceTree = "<group>";
-		};
-		216E29702B974E5600118E28 /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				216E29712B974E6500118E28 /* KeyboardReadable.swift */,
-			);
-			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		21F7C0682B92020900DAAE2A /* Sources */ = {
